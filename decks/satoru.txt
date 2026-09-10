@@ -1,0 +1,127 @@
+1 Access Tunnel
+1 Ancient Silver Dragon
+1 Arcane Signet
+1 Archmage Emeritus
+1 Archpriest of Shadows
+1 Baleful Strix
+1 Blightsteel Colossus
+1 Brainstorm
+1 Changeling Outcast
+1 Choked Estuary
+1 Command Tower
+1 Counterspell
+1 Creeping Tar Pit
+1 Cut Down
+1 Dark Ritual
+1 Darkwater Catacombs
+1 Demonic Tutor
+1 Dimir Locket
+1 Dimir Signet
+1 Dismal Backwater
+1 Evolving Wilds
+1 Exotic Orchard
+1 Faerie Seer
+1 Fallen Shinobi
+1 Feed the Swarm
+1 Fellwar Stone
+1 Final Parting
+1 Gingerbrute
+1 Go for the Throat
+1 Gudul Lurker
+1 Higure, the Still Wind
+1 Ingenious Infiltrator
+1 Ink-Eyes, Servant of Oni
+8 Island
+1 Jin-Gitaxias, Core Augur
+1 Kaito Shizuki
+1 Kozilek, the Great Distortion
+1 Lightning Greaves
+1 Lotus Petal
+1 Mana Leak
+1 Mausoleum Wanderer
+1 Military Intelligence
+1 Mind Stone
+1 Mist-Cloaked Herald
+1 Mist-Syndicate Naga
+1 Morphic Pool
+1 Nashi, Moon Sage's Scion
+1 Negate
+1 Ornithopter
+1 Pongify
+1 Preordain
+1 Profane Tutor
+1 Razaketh, the Foulblooded
+1 Reanimate
+1 Reconnaissance Mission
+1 River of Tears
+1 Sakashima's Student
+1 Sheoldred, Whispering One
+1 Shizo, Death's Storehouse
+1 Silent-Blade Oni
+1 Silver-Fur Master
+1 Slither Blade
+1 Sol Ring
+1 Soul Manipulation
+1 Spectral Sailor
+1 Sunken Hollow
+1 Sunken Ruins
+8 Swamp
+1 Swiftfoot Boots
+1 Tainted Isle
+1 Talisman of Dominance
+1 Terramorphic Expanse
+1 Tetsuko Umezawa, Fugitive
+1 Thassa, God of the Sea
+1 Thousand-Faced Shadow
+1 Toxrill, the Corrosive
+1 Triton Shorestalker
+1 Underground River
+1 Valgavoth, Terror Eater
+1 Vampiric Tutor
+1 Victimize
+1 Waterfront District
+1 Watery Grave
+1 Wingcrafter
+1 Yuriko, the Tiger's Shadow
+
+1 Satoru Umezawa
+
+# Considering
+1 Agadeem's Awakening // Agadeem, the Undercrypt
+1 Archon of Cruelty
+1 Azra Smokeshaper
+1 Bitterblossom
+1 Clearwater Pathway // Murkwater Pathway
+1 Consecrated Sphinx
+1 Cyclonic Rift
+1 Damnation
+1 Darkslick Shores
+1 Deadly Rollick
+1 Dream Halls
+1 Drown in the Loch
+1 Drowned Catacomb
+1 Emrakul, the Promised End
+1 Fierce Guardianship
+1 Flusterstorm
+1 Force of Negation
+1 Force of Will
+1 Grave Titan
+1 Grazilaxx, Illithid Scholar
+1 Imperial Seal
+1 Kozilek, Butcher of Truth
+1 Mana Confluence
+1 Mana Drain
+1 Misdirection
+1 Moon-Circuit Hacker
+1 Mystic Remora
+1 Palinchron
+1 Polluted Delta
+1 Rhystic Study
+1 Sea Gate Restoration // Sea Gate, Reborn
+1 Sensei's Divining Top
+1 Show and Tell
+1 Snuff Out
+1 Swan Song
+1 Toxic Deluge
+1 Ulamog, the Infinite Gyre
+1 Urborg, Tomb of Yawgmoth
