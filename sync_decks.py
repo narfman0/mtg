@@ -4,10 +4,12 @@
 Usage: sync_decks.py [deck ...]     (no args = sync all)
 
 Writes decks/<name>.txt as: mainboard, blank line, commander(s), then a
-"# Considering" section mirroring the Moxfield maybeboard.
+"# Considering" section mirroring the Moxfield maybeboard. Deck changes
+are committed and pushed automatically.
 """
 import json
 import os
+import subprocess
 import sys
 import urllib.request
 
@@ -46,12 +48,28 @@ def sync(name, public_id):
           f" + {maybe['count']} considering)")
 
 
+def commit_and_push():
+    git = ["git", "-C", BASE]
+    status = subprocess.run(git + ["status", "--porcelain", "decks"],
+                            capture_output=True, text=True, check=True).stdout
+    if not status.strip():
+        print("decks unchanged; nothing to commit")
+        return
+    changed = sorted(os.path.splitext(os.path.basename(line[3:]))[0]
+                     for line in status.strip().splitlines())
+    subprocess.run(git + ["add", "decks"], check=True)
+    subprocess.run(git + ["commit", "-m",
+                          f"Sync {', '.join(changed)} from Moxfield"], check=True)
+    subprocess.run(git + ["push"], check=True)
+
+
 def main():
     names = sys.argv[1:] or list(DECKS)
     for name in names:
         if name not in DECKS:
             sys.exit(f"unknown deck {name!r}; known: {', '.join(DECKS)}")
         sync(name, DECKS[name])
+    commit_and_push()
 
 
 if __name__ == "__main__":
