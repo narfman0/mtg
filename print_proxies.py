@@ -60,6 +60,11 @@ MEDIA_PTS = {
 INPUT_SLOT = "RearPaperFeed"  # the straight path; cardstock and vinyl need it
 LOW_INK = 20  # percent
 
+# _HIGH is the top quality tier the ESC/P-R driver exposes -- there is no
+# separate resolution knob, so the suffix is the whole quality setting. Every
+# stock above must use it; this is the guard against a _NORMAL creeping in.
+assert all(v.endswith("_HIGH") for v in STOCKS.values()), STOCKS
+
 
 def run(cmd):
     return subprocess.run(cmd, capture_output=True, text=True).stdout
@@ -102,7 +107,7 @@ def pdf_page_size(path):
     return (float(m.group(1)), float(m.group(2))) if m else None
 
 
-def check_page_size(path, page_size, force):
+def check_page_size(path, page_size):
     pdf = pdf_page_size(path)
     want = MEDIA_PTS.get(page_size.lstrip("T"))
     if not pdf or not want:
@@ -111,12 +116,10 @@ def check_page_size(path, page_size, force):
           or all(abs(a - b) <= 2 for a, b in zip(pdf[::-1], want)))
     if ok:
         return
-    msg = (f"PDF page is {pdf[0]:.0f}x{pdf[1]:.0f} pts but media {page_size} is "
-           f"{want[0]:.0f}x{want[1]:.0f} pts. Scaling is off by design, so this "
-           f"will clip or offset the cards rather than resize them.")
-    if not force:
-        sys.exit(f"{msg}\nFix the PDF or pass --media/--force.")
-    print(f"warning: {msg}")
+    sys.exit(f"PDF page is {pdf[0]:.0f}x{pdf[1]:.0f} pts but media {page_size} is "
+             f"{want[0]:.0f}x{want[1]:.0f} pts. Scaling is off by design, so this "
+             f"would clip or offset the cards rather than resize them.\n"
+             f"Re-export the PDF at {page_size}, or pass --media for the size it is.")
 
 
 def build_options(args, avail):
@@ -124,7 +127,7 @@ def build_options(args, avail):
         "print-scaling": "none",   # true 100% -- never let CUPS resample the art
         "number-up": "1",
         "Duplex": "None",
-        "Ink": "MONO" if args.mono else "COLOR",
+        "Ink": "COLOR",
         "MediaType": STOCKS[args.stock],
         "PageSize": args.page_size,
         "InputSlot": INPUT_SLOT,
@@ -145,11 +148,8 @@ def main():
     p.add_argument("-n", "--copies", type=int, default=1)
     p.add_argument("--pages", help="page range, e.g. 1 or 2-4")
     p.add_argument("--media", dest="page_size", default="Letter")
-    p.add_argument("--mono", action="store_true")
     p.add_argument("--test", action="store_true",
                    help="one page on plain paper, to check layout before using stock")
-    p.add_argument("--force", action="store_true",
-                   help="print despite a page-size mismatch")
     p.add_argument("--dry-run", action="store_true", help="show the lp command only")
     p.add_argument("--list", action="store_true",
                    help="print the driver's own option list and exit")
@@ -175,7 +175,7 @@ def main():
                  f"choices: {', '.join(sorted(STOCKS))}")
 
     check_printer(args.printer)
-    check_page_size(args.pdf, args.page_size, args.force)
+    check_page_size(args.pdf, args.page_size)
 
     opts = build_options(args, avail)
     cmd = ["lp", "-d", args.printer, "-n", str(args.copies),
