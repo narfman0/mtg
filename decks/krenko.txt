@@ -1,0 +1,77 @@
+1 Abrade
+1 Armillary Sphere
+1 Battle Cry Goblin
+1 Battle Squadron
+1 Beetleback Chief
+1 Blighted Gorge
+1 Chaos Warp
+1 Chimney Rabble
+1 Dragon Fodder
+1 Electric Revelation
+1 Empty the Warrens
+1 Evolving Wilds
+1 Exuberant Fuseling
+1 Faithless Looting
+1 Fireblade Charger
+1 Fissure
+1 Flamewave Invoker
+1 Forgotten Cave
+1 Foundry Street Denizen
+1 Goblin Arsonist
+1 Goblin Assault
+1 Goblin Bombardment
+1 Goblin Burrows
+1 Goblin Gathering
+1 Goblin Instigator
+1 Goblin Javelineer
+1 Goblin Matron
+1 Goblin Rabblemaster
+1 Goblin Ringleader
+1 Goblin Traprunner
+1 Goblin War Drums
+1 Goblin War Party
+1 Goblin War Strike
+1 Goblin Warchief
+1 Goblin Wardriver
+1 Goblinslide
+1 Grotag Night-Runner
+1 Hidden Volcano
+1 Hordeling Outburst
+1 Impact Tremors
+1 Krenko, Tin Street Kingpin
+1 Krenko's Command
+1 Kyren Negotiations
+1 Legion Warboss
+1 Memorial to War
+1 Mirror Shield
+1 Mogg Fanatic
+1 Mogg Raider
+1 Mogg War Marshal
+25 Mountain
+1 Raid Bombardment
+1 Reckless Bushwhacker
+1 Renegade Map
+1 Rob the Archives
+1 Seer's Sundial
+1 Shattering Pulse
+1 Siege-Gang Commander
+1 Skirk Prospector
+1 Smoldering Crater
+1 Sol Ring
+1 Spikeshot Goblin
+1 Staff of Domination
+1 Street Spasm
+1 Terramorphic Expanse
+1 Thrill of Possibility
+1 Throes of Chaos
+1 Tin Street Dodger
+1 Torch Courier
+1 Tormenting Voice
+1 Traveler's Amulet
+1 Volley Veteran
+1 Warbreak Trumpeter
+1 Warstorm Surge
+1 Witty Roastmaster
+1 You See a Pair of Goblins
+
+1 Krenko, Mob Boss
