@@ -1,0 +1,81 @@
+1 Angelfire Ignition
+1 Aqueous Form
+1 Arcane Signet
+1 Archmage Emeritus
+1 Artful Dodge
+1 Azorius Signet
+1 Balmor, Battlemage Captain
+1 Battlefield Forge
+1 Blazing Crescendo
+1 Boros Charm
+1 Boros Guildgate
+1 Boros Signet
+1 Brainstorm
+1 Brute Force
+1 Clifftop Retreat
+1 Combat Research
+1 Command Tower
+1 Counterspell
+1 Defiant Strike
+1 Distortion Strike
+1 Dragon-Style Twins
+1 Elsha of the Infinite
+1 Emerge Unscathed
+1 Evolving Wilds
+1 Exotic Orchard
+1 Feather, the Redeemed
+1 Fiery Inscription
+1 Fists of Flame
+1 Frantic Search
+1 Frolicking Familiar // Blow Off Steam
+1 Glacial Fortress
+1 Glamdring
+1 Gods Willing
+1 Guttersnipe
+1 Infuriate
+1 Invigorated Rampage
+6 Island
+1 Izzet Guildgate
+1 Izzet Signet
+1 Jeskai Ascendancy
+1 Kediss, Emberclaw Familiar
+1 Kykar, Wind's Fury
+1 Loran's Escape
+1 Medomai the Ageless
+1 Monastery Mentor
+1 Monastery Swiftspear
+1 Monk Class
+1 Monstrous Rage
+1 Mother of Runes
+5 Mountain
+1 Mystic Monastery
+1 Narset of the Ancient Way
+1 Opt
+4 Plains
+1 Ponder
+1 Preordain
+1 Reckless Charge
+1 Rogue's Passage
+1 Runechanter's Pike
+1 Scroll of the Masters
+1 Seeker of the Way
+1 Shadow Rift
+1 Shivan Reef
+1 Sol Ring
+1 Sprite Dragon
+1 Staggering Insight
+1 Sulfur Falls
+1 Sunforger
+1 Swiftfoot Boots
+1 Swords to Plowshares
+1 Taigam, Ojutai Master
+1 Talisman of Conviction
+1 Talisman of Creativity
+1 Third Path Iconoclast
+1 Titan's Strength
+1 Tranquil Cove
+1 Unleash Fury
+1 Veyran, Voice of Duality
+1 Whirlwind of Thought
+
+1 Shu Yun, the Silent Tempest
