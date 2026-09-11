@@ -84,6 +84,33 @@
 
 1 Niv-Mizzet, Parun
 
+# Proxies (tagged on Moxfield; also listed above)
+1 Consecrated Sphinx
+1 Cyclonic Rift
+1 Deflecting Swat
+1 Fabled Passage
+1 Faerie Mastermind
+1 Fierce Guardianship
+1 Fiery Inscription
+1 Flame of Anor
+1 Mana Drain
+1 Mizzix's Mastery
+1 Mystic Remora
+1 Mystical Tutor
+1 Otawara, Soaring City
+1 Personal Tutor
+1 Plaza of Heroes
+1 Pongify
+1 Reflecting Pool
+1 Rhystic Study
+1 Riverglide Pathway // Lavaglide Pathway
+1 Scalding Tarn
+1 Steam Vents
+1 Swan Song
+1 The One Ring
+1 Training Center
+1 Underworld Breach
+
 # Considering
 1 Chain of Vapor
 1 Drift of Phantasms

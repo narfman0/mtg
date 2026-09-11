@@ -1,4 +1,5 @@
 1 Ajani's Pridemate
+1 Ajani's Welcome
 1 Ajani, the Greathearted
 1 Arcane Signet
 1 Battlefield Forge
@@ -26,6 +27,7 @@
 1 Growing Ranks
 1 Gruul Signet
 1 Gruul Turf
+1 Heroic Intervention
 1 Jedit Ojanen of Efrava
 1 Jetmir, Nexus of Revels
 1 Jinnie Fay, Jetmir's Second
@@ -34,12 +36,16 @@
 1 Keeper of Fables
 1 King of the Pride
 1 Kutzil, Malamet Exemplar
+1 Leonin Warleader
 1 Loyal Warhound
+1 Marisi, Breaker of the Coil
+1 Maskwood Nexus
 1 Mirri, Weatherlight Duelist
 1 Mirror Entity
 1 Mosswort Bridge
 1 Myriad Landscape
 1 Naya Panorama
+1 Overgrown Farmland
 1 Overwhelming Stampede
 1 Pack Leader
 1 Path of Ancestry
@@ -49,7 +55,9 @@
 1 Pridemalkin
 1 Prowling Serpopard
 1 Qasali Pridemage
+1 Qasali Slingers
 1 Radiant Grove
+1 Regal Caracal
 1 Release the Dogs
 1 Rhythm of the Wild
 1 Rising of the Day
@@ -92,7 +100,7 @@
 
 1 Rin and Seri, Inseparable
 
-# Proxies
+# Proxies (tagged on Moxfield; also listed above)
 1 Ajani's Welcome
 1 Heroic Intervention
 1 Leonin Warleader

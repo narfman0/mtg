@@ -83,6 +83,16 @@
 
 1 Satoru Umezawa
 
+# Proxies (tagged on Moxfield; also listed above)
+1 Consecrated Sphinx
+1 Demonic Tutor
+1 Imperial Seal
+1 Morphic Pool
+1 Sheoldred, Whispering One
+1 Shizo, Death's Storehouse
+1 Valgavoth, Terror Eater
+1 Vampiric Tutor
+
 # Considering
 1 Agadeem's Awakening // Agadeem, the Undercrypt
 1 Archon of Cruelty

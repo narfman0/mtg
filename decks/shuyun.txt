@@ -23,6 +23,7 @@
 1 Emerge Unscathed
 1 Evolving Wilds
 1 Exotic Orchard
+1 Expedite
 1 Feather, the Redeemed
 1 Fiery Inscription
 1 Fists of Flame
@@ -40,6 +41,7 @@
 1 Jeskai Ascendancy
 1 Kediss, Emberclaw Familiar
 1 Kykar, Wind's Fury
+1 Leap
 1 Loran's Escape
 1 Medomai the Ageless
 1 Monastery Mentor
@@ -50,10 +52,12 @@
 5 Mountain
 1 Mystic Monastery
 1 Narset of the Ancient Way
+1 Narset, Enlightened Exile
 1 Opt
 4 Plains
 1 Ponder
 1 Preordain
+1 Raugrin Triome
 1 Reckless Charge
 1 Rogue's Passage
 1 Runechanter's Pike
@@ -61,6 +65,7 @@
 1 Seeker of the Way
 1 Shadow Rift
 1 Shivan Reef
+1 Slip Through Space
 1 Sol Ring
 1 Sprite Dragon
 1 Staggering Insight
@@ -73,6 +78,7 @@
 1 Talisman of Creativity
 1 Third Path Iconoclast
 1 Titan's Strength
+1 Training Center
 1 Tranquil Cove
 1 Unleash Fury
 1 Veyran, Voice of Duality
@@ -80,7 +86,7 @@
 
 1 Shu Yun, the Silent Tempest
 
-# Proxies
+# Proxies (tagged on Moxfield; also listed above)
 1 Expedite
 1 Leap
 1 Narset, Enlightened Exile
