@@ -79,3 +79,11 @@
 1 Whirlwind of Thought
 
 1 Shu Yun, the Silent Tempest
+
+# Proxies
+1 Expedite
+1 Leap
+1 Narset, Enlightened Exile
+1 Raugrin Triome
+1 Slip Through Space
+1 Training Center

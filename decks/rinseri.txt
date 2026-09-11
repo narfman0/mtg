@@ -91,3 +91,13 @@
 1 Windbrisk Heights
 
 1 Rin and Seri, Inseparable
+
+# Proxies
+1 Ajani's Welcome
+1 Heroic Intervention
+1 Leonin Warleader
+1 Marisi, Breaker of the Coil
+1 Maskwood Nexus
+1 Overgrown Farmland
+1 Qasali Slingers
+1 Regal Caracal
