@@ -26,6 +26,7 @@
 1 Go for the Throat
 1 Gudul Lurker
 1 Higure, the Still Wind
+1 Imperial Seal
 1 Ingenious Infiltrator
 1 Ink-Eyes, Servant of Oni
 10 Island
@@ -47,7 +48,6 @@
 1 Ornithopter
 1 Pongify
 1 Preordain
-1 Profane Tutor
 1 Razaketh, the Foulblooded
 1 Reanimate
 1 Reconnaissance Mission
@@ -104,7 +104,6 @@
 1 Force of Will
 1 Grave Titan
 1 Grazilaxx, Illithid Scholar
-1 Imperial Seal
 1 Kozilek, Butcher of Truth
 1 Mana Confluence
 1 Mana Drain
