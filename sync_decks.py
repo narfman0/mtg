@@ -16,6 +16,7 @@ import urllib.request
 DECKS = {
     "satoru": "y-k2M1abFEmeATCYD04W1A",
     "niv": "cm0ImMAUZUWxdvEegyYrQw",
+    "krenko": "mdyk7Zw6tEuRmAR86ijzPw",
 }
 
 BASE = os.path.dirname(os.path.abspath(__file__))
