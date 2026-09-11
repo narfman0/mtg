@@ -4,8 +4,9 @@
 Usage: sync_decks.py [deck ...]     (no args = sync all)
 
 Writes decks/<name>.txt as: mainboard, blank line, commander(s), then a
-"# Considering" section mirroring the Moxfield maybeboard. Deck changes
-are committed and pushed automatically.
+"# Proxies" section (the Moxfield sideboard: cards in the deck that are
+proxies) and a "# Considering" section (the maybeboard: candidates, not
+part of the deck). Deck changes are committed and pushed automatically.
 """
 import json
 import os
@@ -40,6 +41,9 @@ def sync(name, public_id):
     boards = deck["boards"]
     out = board_lines(boards["mainboard"])
     out += [""] + board_lines(boards["commanders"])
+    side = boards.get("sideboard", {"count": 0})
+    if side["count"]:
+        out += ["", "# Proxies"] + board_lines(side)
     maybe = boards.get("maybeboard", {"count": 0})
     if maybe["count"]:
         out += ["", "# Considering"] + board_lines(maybe)
@@ -49,7 +53,7 @@ def sync(name, public_id):
         fh.write("\n".join(out) + "\n")
     print(f"{name}: {deck['name']!r} -> {path} "
           f"({boards['mainboard']['count']} main + {boards['commanders']['count']} cmdr"
-          f" + {maybe['count']} considering)")
+          f" + {side['count']} proxies + {maybe['count']} considering)")
 
 
 def commit_and_push():
