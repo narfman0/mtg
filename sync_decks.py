@@ -4,9 +4,10 @@
 Usage: sync_decks.py [deck ...]     (no args = sync all)
 
 Writes decks/<name>.txt as: mainboard, blank line, commander(s), then a
-"# Proxies" section (the Moxfield sideboard: cards in the deck that are
-proxies) and a "# Considering" section (the maybeboard: candidates, not
-part of the deck). Deck changes are committed and pushed automatically.
+"# Proxies" section (mainboard cards carrying Moxfield's "proxy" tag --
+a subset of the list above, not extra cards) and a "# Considering"
+section (the maybeboard: candidates, not part of the deck). Deck changes
+are committed and pushed automatically.
 """
 import json
 import os
@@ -41,9 +42,19 @@ def sync(name, public_id):
     boards = deck["boards"]
     out = board_lines(boards["mainboard"])
     out += [""] + board_lines(boards["commanders"])
-    side = boards.get("sideboard", {"count": 0})
-    if side["count"]:
-        out += ["", "# Proxies"] + board_lines(side)
+    tags = deck.get("authorTags") or {}
+    in_deck = {v["card"]["name"]: v["quantity"]
+               for b in ("mainboard", "commanders")
+               for v in boards[b]["cards"].values()}
+    # Tags can also sit on maybeboard cards; only the deck's own count here.
+    proxies = sorted(n for n, t in tags.items()
+                     if any(x.lower() == "proxy" for x in t) and n in in_deck)
+    if proxies:
+        out += ["", "# Proxies (tagged on Moxfield; also listed above)"]
+        out += [f"{in_deck[n]} {n}" for n in proxies]
+    other = sorted({x for t in tags.values() for x in t if x.lower() != "proxy"})
+    if other:
+        print(f"  note: {name} has untracked tags: {', '.join(other)}")
     maybe = boards.get("maybeboard", {"count": 0})
     if maybe["count"]:
         out += ["", "# Considering"] + board_lines(maybe)
@@ -53,7 +64,7 @@ def sync(name, public_id):
         fh.write("\n".join(out) + "\n")
     print(f"{name}: {deck['name']!r} -> {path} "
           f"({boards['mainboard']['count']} main + {boards['commanders']['count']} cmdr"
-          f" + {side['count']} proxies + {maybe['count']} considering)")
+          f" + {len(proxies)} proxied + {maybe['count']} considering)")
 
 
 def commit_and_push():
