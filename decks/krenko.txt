@@ -38,8 +38,8 @@
 1 Hidden Volcano
 1 Hordeling Outburst
 1 Impact Tremors
-1 Krenko, Tin Street Kingpin
 1 Krenko's Command
+1 Krenko, Tin Street Kingpin
 1 Kyren Negotiations
 1 Legion Warboss
 1 Memorial to War
@@ -75,3 +75,10 @@
 1 You See a Pair of Goblins
 
 1 Krenko, Mob Boss
+
+# Considering
+1 Conspicuous Snoop
+1 Goblin Recruiter
+1 Kiki-Jiki, Mirror Breaker
+1 Purphoros, God of the Forge
+1 Thornbite Staff
