@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Print proxy PDFs (MPCFill etc.) on the Epson ET-8500 with known-good settings.
 
-Usage: print_proxies.py [options] <file.pdf>
+Usage: print_proxies.py -p <stock> <file.pdf>
        print_proxies.py --list            (show what the driver actually offers)
+
+-p is mandatory and has no default: it is the point in the run where you assert
+what is physically in the tray. Nothing prints until you say what you loaded.
 
 Why this exists -- the two things that ruin a proxy sheet:
 
@@ -15,11 +18,11 @@ Why this exists -- the two things that ruin a proxy sheet:
    PB (dye photo) -- and the driver picks between them from the media type, not
    from the paper you actually loaded. Pigment on matte stock gives the crispest
    small text; dye on glossy stock keeps photo blacks deep and non-smearing.
-   Mismatch either way and text looks "off". Pick the preset for your stock.
+   Mismatch either way and text looks "off". Pick the -p entry for your stock.
 
 Foil/metallic stock prints dark because there is no white ink laying an opaque
 base under the CMYK -- the mirror substrate reflects the room, not a lamp. Feed
-it with the "thick" preset and lighten the PDF itself before printing; driver
+it with the "thick" stock and lighten the PDF itself before printing; driver
 brightness cannot add the white layer that is missing.
 """
 import argparse
@@ -30,10 +33,13 @@ import sys
 
 PRINTER = "EPSON_ET_8500"
 
-# preset -> MediaType, which encodes both the paper and the quality tier
-# (_HIGH = best). "thick" is also the one to use for foil/metallic stock.
-PRESETS = {
-    "matte":       "PMMATT_HIGH",      # matte proxy cardstock -- default
+# stock -> MediaType, which encodes both the paper and the quality tier
+# (_HIGH = best). Matte entries route text through the pigment black (MB),
+# glossy entries through the photo black (PB) -- see the note up top.
+STOCKS = {
+    "vinyl":       "PMMATT_HIGH",      # matte vinyl sticker sheets
+    "vinyl-gloss": "PLATINA_HIGH",     # glossy vinyl sticker sheets
+    "matte":       "PMMATT_HIGH",      # matte proxy cardstock
     "thick":       "THICK1_HIGH",      # heavy cardstock, incl. foil/metallic
     "thicker":     "THICK2_HIGH",      # heaviest the feeder takes
     "glossy":      "PLATINA_HIGH",
@@ -51,6 +57,7 @@ MEDIA_PTS = {
     "8x10": (576, 720), "2L": (360, 504.57), "Postcard": (283.46, 419.53),
 }
 
+INPUT_SLOT = "RearPaperFeed"  # the straight path; cardstock and vinyl need it
 LOW_INK = 20  # percent
 
 
@@ -118,9 +125,9 @@ def build_options(args, avail):
         "number-up": "1",
         "Duplex": "None",
         "Ink": "MONO" if args.mono else "COLOR",
-        "MediaType": PRESETS[args.preset],
+        "MediaType": STOCKS[args.stock],
         "PageSize": args.page_size,
-        "InputSlot": args.input_slot,
+        "InputSlot": INPUT_SLOT,
     }
     for key, val in sorted(opts.items()):
         choices = avail.get(key)
@@ -133,16 +140,14 @@ def main():
     p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     p.add_argument("pdf", nargs="?", help="PDF to print")
     p.add_argument("-P", "--printer", default=PRINTER)
-    p.add_argument("-p", "--preset", default="matte", choices=sorted(PRESETS),
-                   help="paper/stock preset (default: matte)")
+    p.add_argument("-p", "--stock", choices=sorted(STOCKS),
+                   help="what is loaded in the tray; required, no default")
     p.add_argument("-n", "--copies", type=int, default=1)
     p.add_argument("--pages", help="page range, e.g. 1 or 2-4")
     p.add_argument("--media", dest="page_size", default="Letter")
-    p.add_argument("--input-slot", default="RearPaperFeed",
-                   help="RearPaperFeed handles cardstock; Cassette1 for plain")
     p.add_argument("--mono", action="store_true")
     p.add_argument("--test", action="store_true",
-                   help="one page on plain paper from the cassette, to check layout")
+                   help="one page on plain paper, to check layout before using stock")
     p.add_argument("--force", action="store_true",
                    help="print despite a page-size mismatch")
     p.add_argument("--dry-run", action="store_true", help="show the lp command only")
@@ -161,8 +166,13 @@ def main():
         sys.exit(f"no such file: {args.pdf}")
 
     if args.test:
-        args.preset, args.input_slot = "plain", "Auto"
+        if args.stock:
+            sys.exit("--test prints on plain paper; drop -p")
+        args.stock = "plain"
         args.pages = args.pages or "1"
+    elif not args.stock:
+        sys.exit("pass -p to confirm what is loaded in the tray, e.g. -p vinyl\n"
+                 f"choices: {', '.join(sorted(STOCKS))}")
 
     check_printer(args.printer)
     check_page_size(args.pdf, args.page_size, args.force)
@@ -179,8 +189,8 @@ def main():
     pdf = pdf_page_size(args.pdf)
     size = f"{pdf[0] / 72:.2f}x{pdf[1] / 72:.2f} in" if pdf else "unknown size"
     print(f"{args.pdf} ({size}) -> {args.printer} "
-          f"[{args.preset}: {opts['MediaType']}, {opts['PageSize']}, "
-          f"{opts['InputSlot']}, scaling off]")
+          f"[{args.stock}: {opts['MediaType']}, {opts['PageSize']}, "
+          f"scaling off]")
     if args.dry_run:
         print(" ".join(cmd))
         return
