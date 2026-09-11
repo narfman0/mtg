@@ -7,6 +7,7 @@
 1 Cascade Bluffs
 1 Castle Vantress
 1 Command Tower
+1 Consecrated Sphinx
 1 Consider
 1 Counterspell
 1 Curiosity
@@ -31,7 +32,6 @@
 11 Island
 1 Izzet Charm
 1 Izzet Signet
-1 Kessig Flamebreather
 1 Laboratory Maniac
 1 Lightning Bolt
 1 Mana Drain
@@ -86,7 +86,6 @@
 
 # Considering
 1 Chain of Vapor
-1 Consecrated Sphinx
 1 Drift of Phantasms
 1 Exotic Orchard
 1 Ferrous Lake
