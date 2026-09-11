@@ -18,9 +18,9 @@ Why this exists -- the two things that ruin a proxy sheet:
    Mismatch either way and text looks "off". Pick the preset for your stock.
 
 Foil/metallic stock prints dark because there is no white ink laying an opaque
-base under the CMYK -- the mirror substrate reflects the room, not a lamp. The
-"foil" preset pre-lightens to compensate; treat its numbers as a starting point
-and tune with --brightness/--contrast against a single test card.
+base under the CMYK -- the mirror substrate reflects the room, not a lamp. Feed
+it with the "thick" preset and lighten the PDF itself before printing; driver
+brightness cannot add the white layer that is missing.
 """
 import argparse
 import os
@@ -30,18 +30,17 @@ import sys
 
 PRINTER = "EPSON_ET_8500"
 
-# preset -> (MediaType, {extra lp options})
-# MediaType encodes both the paper and the quality tier (_HIGH = best).
+# preset -> MediaType, which encodes both the paper and the quality tier
+# (_HIGH = best). "thick" is also the one to use for foil/metallic stock.
 PRESETS = {
-    "matte":       ("PMMATT_HIGH",     {}),   # matte proxy cardstock -- default
-    "thick":       ("THICK1_HIGH",     {}),   # heavy cardstock
-    "thicker":     ("THICK2_HIGH",     {}),   # heaviest the feeder takes
-    "glossy":      ("PLATINA_HIGH",    {}),
-    "semigloss":   ("PMPHOTO_HIGH",    {}),
-    "ultraglossy": ("LCPP_HIGH",       {}),
-    "fineart":     ("VELVET_FINE_HIGH", {}),
-    "foil":        ("THICK1_HIGH",     {"Brightness": "12", "Contrast": "-8"}),
-    "plain":       ("PLAIN_HIGH",      {}),   # cheap test prints on copy paper
+    "matte":       "PMMATT_HIGH",      # matte proxy cardstock -- default
+    "thick":       "THICK1_HIGH",      # heavy cardstock, incl. foil/metallic
+    "thicker":     "THICK2_HIGH",      # heaviest the feeder takes
+    "glossy":      "PLATINA_HIGH",
+    "semigloss":   "PMPHOTO_HIGH",
+    "ultraglossy": "LCPP_HIGH",
+    "fineart":     "VELVET_FINE_HIGH",
+    "plain":       "PLAIN_HIGH",       # cheap test prints on copy paper
 }
 
 # PageSize -> (width, height) in points, for the no-scaling sanity check.
@@ -114,23 +113,15 @@ def check_page_size(path, page_size, force):
 
 
 def build_options(args, avail):
-    """Fixed options first, then the preset, then explicit overrides."""
-    media_type, preset_extra = PRESETS[args.preset]
     opts = {
         "print-scaling": "none",   # true 100% -- never let CUPS resample the art
         "number-up": "1",
         "Duplex": "None",
         "Ink": "MONO" if args.mono else "COLOR",
-        "MediaType": media_type,
+        "MediaType": PRESETS[args.preset],
         "PageSize": args.page_size,
         "InputSlot": args.input_slot,
     }
-    opts.update(preset_extra)
-    for key, val in (("Brightness", args.brightness), ("Contrast", args.contrast),
-                     ("Saturation", args.saturation)):
-        if val is not None:
-            opts[key] = str(val)
-
     for key, val in sorted(opts.items()):
         choices = avail.get(key)
         if choices and val not in choices:
@@ -147,13 +138,8 @@ def main():
     p.add_argument("-n", "--copies", type=int, default=1)
     p.add_argument("--pages", help="page range, e.g. 1 or 2-4")
     p.add_argument("--media", dest="page_size", default="Letter")
-    p.add_argument("--borderless", action="store_true",
-                   help="use the borderless variant of the media size, if any")
     p.add_argument("--input-slot", default="RearPaperFeed",
                    help="RearPaperFeed handles cardstock; Cassette1 for plain")
-    p.add_argument("--brightness", type=int, help="-25..25, lighten for foil")
-    p.add_argument("--contrast", type=int, help="-25..25")
-    p.add_argument("--saturation", type=int, help="-25..25")
     p.add_argument("--mono", action="store_true")
     p.add_argument("--test", action="store_true",
                    help="one page on plain paper from the cassette, to check layout")
@@ -177,13 +163,6 @@ def main():
     if args.test:
         args.preset, args.input_slot = "plain", "Auto"
         args.pages = args.pages or "1"
-
-    if args.borderless:
-        candidate = "T" + args.page_size
-        if candidate in avail.get("PageSize", []):
-            args.page_size = candidate
-        else:
-            sys.exit(f"no borderless variant for {args.page_size}")
 
     check_printer(args.printer)
     check_page_size(args.pdf, args.page_size, args.force)
