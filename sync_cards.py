@@ -9,11 +9,18 @@ the file. The bulk-data metadata endpoint is a few KB and carries an
 `updated_at` per file, so we fetch that first and only pull the ~25 MB
 oracle-cards archive when Scryfall's copy is newer than ours.
 
-The card file itself is gitignored (regenerable), which means git can't show
-what changed between refreshes. The two fields that matter for deckbuilding
--- Commander legality and the Game Changers flag -- are therefore snapshotted
-into the committed cards-status.json, and every sync diffs against it and
-reports bans, unbans, and Game Changer changes.
+The card file itself stays gitignored: at ~200 MB it exceeds GitHub's 100 MB
+per-file limit, and because Scryfall re-prices every card daily, git can delta
+neither it nor its archive -- each refresh would add ~22 MB to history forever.
+Since the same upstream file lands byte-identical on every machine, the sync is
+the sharing mechanism and only the *version* needs to be shared.
+
+So the committed cards-status.json doubles as that shared pin: it records the
+Scryfall `updated_at` every machine should be on, plus the two fields that
+matter for deckbuilding -- Commander legality and the Game Changers flag -- so
+each sync can diff against it and report bans, unbans, and Game Changer
+changes. This machine's own version lives in the gitignored .cards-local.json,
+and a mismatch between the two means "git pull happened, re-run this script".
 """
 import argparse
 import gzip
@@ -29,6 +36,7 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 CARDS = os.path.join(BASE, "oracle-cards.jsonl")
 ARCHIVE = CARDS + ".gz"
 STATUS = os.path.join(BASE, "cards-status.json")
+LOCAL = os.path.join(BASE, ".cards-local.json")   # gitignored; what THIS machine has
 BULK = "https://api.scryfall.com/bulk-data"
 UA = "mtg-deck-helper/1.0 (narfman0@gmail.com; personal deck research)"
 KIND = "oracle_cards"
@@ -50,11 +58,11 @@ def remote_meta():
     sys.exit(f"scryfall no longer publishes a {KIND!r} bulk file")
 
 
-def load_status():
+def load(path):
     try:
-        with open(STATUS) as fh:
+        with open(path) as fh:
             return json.load(fh)
-    except FileNotFoundError:
+    except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
 
@@ -89,6 +97,15 @@ def diff(old, new, key, label):
     return bool(added or removed)
 
 
+def stamp(updated_at):
+    """Record which upstream build this machine now holds."""
+    with open(LOCAL, "w") as fh:
+        json.dump({"updated_at": updated_at,
+                   "fetched": datetime.now(timezone.utc).isoformat(timespec="seconds")},
+                  fh, indent=1)
+        fh.write("\n")
+
+
 def download(uri):
     req = urllib.request.Request(uri, headers={"User-Agent": UA})
     tmp = ARCHIVE + ".part"
@@ -103,13 +120,26 @@ def download(uri):
     os.replace(tmp, CARDS)
 
 
-def stale(max_age):
-    """True if the local card file is missing or older than max_age days."""
+def fetched_at():
+    """When this machine last pulled the card file, or None if it has none."""
     if not os.path.exists(CARDS):
-        return True
-    age = datetime.now(timezone.utc) - datetime.fromtimestamp(
-        os.path.getmtime(CARDS), timezone.utc)
-    return age >= timedelta(days=max_age)
+        return None
+    stamp = load(LOCAL).get("fetched")
+    if stamp:
+        return datetime.fromisoformat(stamp)
+    # Predates .cards-local.json (or it was deleted): fall back to the mtime.
+    return datetime.fromtimestamp(os.path.getmtime(CARDS), timezone.utc)
+
+
+def behind_baseline():
+    """The repo's pinned version, when this machine doesn't have it yet.
+
+    cards-status.json is committed, so a git pull can advance the pin while
+    this machine's card file stays where it was."""
+    pinned = load(STATUS).get("updated_at")
+    if pinned and pinned != load(LOCAL).get("updated_at"):
+        return pinned
+    return None
 
 
 def main():
@@ -125,13 +155,21 @@ def main():
     args = ap.parse_args()
 
     have = os.path.exists(CARDS)
-    if not stale(args.max_age) and not args.force:
-        mtime = datetime.fromtimestamp(os.path.getmtime(CARDS), timezone.utc)
-        print(f"oracle-cards.jsonl is fresh (fetched {mtime:%Y-%m-%d}, "
+    fetched = fetched_at()
+    fresh = fetched and datetime.now(timezone.utc) - fetched < timedelta(days=args.max_age)
+    pinned = behind_baseline()
+    if pinned:
+        # Another machine synced and committed the pin; match it regardless of age.
+        mine = load(LOCAL).get("updated_at")
+        print(f"repo pins scryfall {pinned[:10]}, this machine has "
+              f"{mine[:10] if mine else 'an untracked copy'}")
+    if fresh and not pinned and not args.force:
+        print(f"oracle-cards.jsonl is fresh (fetched {fetched:%Y-%m-%d}, "
               f"max-age {args.max_age}d); nothing to do")
         return
     if args.check:
-        state = "missing" if not have else "stale"
+        state = ("missing" if not have
+                 else "behind the repo pin" if pinned else "stale")
         print(f"oracle-cards.jsonl is {state}; run sync_cards.py")
         sys.exit(1)
 
@@ -145,11 +183,10 @@ def main():
         sys.exit(f"scryfall unreachable and no cached card file: {err}")
 
     updated = datetime.fromisoformat(meta["updated_at"])
-    local = (datetime.fromtimestamp(os.path.getmtime(CARDS), timezone.utc)
-             if have else None)
-    if have and local and updated <= local and not args.force:
-        # Bump the mtime so the next --max-age check doesn't re-ask for a week.
-        os.utime(CARDS, None)
+    if have and meta["updated_at"] == load(LOCAL).get("updated_at") and not args.force:
+        # Same upstream build we already hold. Restamp so the next --max-age
+        # check doesn't re-ask for a week.
+        stamp(meta["updated_at"])
         print(f"scryfall's {KIND} is unchanged since {updated:%Y-%m-%d}; "
               f"no download needed")
         return
@@ -159,7 +196,8 @@ def main():
           f"updated {updated:%Y-%m-%d %H:%M} UTC)...")
     download(meta["jsonl_download_uri"])
 
-    old = load_status()
+    stamp(meta["updated_at"])
+    old = load(STATUS)
     new = scan()
     new["updated_at"] = meta["updated_at"]
     print(f"oracle-cards.jsonl: {new['cards']} cards, "
@@ -176,6 +214,9 @@ def main():
     with open(STATUS, "w") as fh:
         json.dump(new, fh, indent=1, sort_keys=True)
         fh.write("\n")
+    if old.get("updated_at") != new["updated_at"]:
+        print(f"commit cards-status.json to pin scryfall "
+              f"{new['updated_at'][:10]} for your other machines")
     if not old:
         print(f"wrote first {os.path.basename(STATUS)} snapshot "
               f"(commit it -- it's the baseline future syncs diff against)")

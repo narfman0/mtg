@@ -86,12 +86,23 @@ file. Under `--max-age` it does not touch the network at all; past that it reads
 the few-KB bulk-data metadata endpoint and only pulls the ~25 MB archive when
 Scryfall's `updated_at` is newer than the local copy.
 
-Because `oracle-cards.jsonl` is gitignored, git cannot show what a refresh
-changed. The two fields that matter for deckbuilding — Commander legality and
-the `game_changer` flag — are snapshotted in the committed `cards-status.json`,
-and each sync diffs against it and prints bans, unbans, and Game Changer
-changes. **Report those lines to the user** rather than swallowing them; a new
-ban can invalidate a deck. Commit `cards-status.json` when it changes.
+`oracle-cards.jsonl` stays gitignored deliberately: at ~200 MB it is over
+GitHub's 100 MB per-file limit, and since Scryfall re-prices every card daily,
+git can delta neither it nor its archive — each refresh would add ~22 MB to
+history permanently. The same upstream file lands byte-identical on every
+machine, so the sync *is* how the data travels; only the version needs sharing.
+
+The committed `cards-status.json` is that shared pin. It records the Scryfall
+`updated_at` every machine should be on, plus the Commander ban list and Game
+Changer list, so each sync diffs against it and prints bans, unbans, and Game
+Changer changes. **Report those lines to the user** rather than swallowing
+them; a new ban can invalidate a deck. Commit the file when it changes — the
+script says so — since that is what moves the other machines forward.
+
+This machine's own version sits in the gitignored `.cards-local.json`. When it
+trails the committed pin (a `git pull` brought a newer one), the script says
+so and refreshes regardless of `--max-age`. So on a second computer the first
+`sync_cards.py` of a session pulls it into line by itself.
 
 If Scryfall is unreachable the script keeps the cached file and says so — use it
 and tell the user it may be stale, same as with a deck sync.

@@ -7,3 +7,6 @@ edhrec/
 
 # byte-compiled helpers (edhrec.py imports sync_edhrec)
 __pycache__/
+
+# This machine's card-file version (the shared pin is cards-status.json)
+.cards-local.json
