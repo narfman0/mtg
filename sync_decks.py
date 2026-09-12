@@ -22,6 +22,7 @@ DECKS = {
     "rinseri": "LK0bV1ELS0S_IdnNgX_jwg",
     "shuyun": "hDAQlRfG_UiwReylsH404Q",
     "slivers": "hCiV_CCqY0ywuV7AZV4lKA",
+    "norin": "0buTKZDWX0KSksQNoFHgkw",
 }
 
 BASE = os.path.dirname(os.path.abspath(__file__))
