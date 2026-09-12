@@ -5,7 +5,7 @@ description: Answer Magic: The Gathering questions using the offline card databa
 
 # MTG offline reference
 
-Two local data sources; always verify card text and rules against them instead of memory. All paths below are relative to the repo root (this skill lives in the repo at `.claude/skills/mtg/`).
+Three local data sources — the card database, the Comprehensive Rules, and an EDHREC page cache; always verify card text, rules, and play rates against them instead of memory. All paths below are relative to the repo root (this skill lives in the repo at `.claude/skills/mtg/`).
 
 ## Decks (Moxfield is source of truth, `decks/` is a cache)
 
@@ -19,7 +19,7 @@ Deck names → Moxfield public IDs live in `DECKS` at the top of that script (ad
 
 ## Card database
 
-`oracle-cards.jsonl` — Scryfall "Oracle Cards" bulk export (JSONL, one card per line, one entry per unique card name, ~38k cards). It is gitignored (regenerable); on a fresh clone, download it first — see "Refreshing the data" below. Useful fields: `name`, `mana_cost`, `cmc`, `type_line`, `oracle_text`, `power`/`toughness`, `color_identity`, `keywords`, `legalities` (dict, e.g. `.commander`), `prices.usd`, `edhrec_rank` (lower = more played), `card_faces` (for double-faced/split cards, which have ` // ` in `name` and their text under faces, not top level).
+`oracle-cards.jsonl` — Scryfall "Oracle Cards" bulk export (JSONL, one card per line, one entry per unique card name, ~38k cards). It is gitignored (regenerable); `python3 sync_cards.py` creates or refreshes it — see "Refreshing the data" below. Useful fields: `name`, `mana_cost`, `cmc`, `type_line`, `oracle_text`, `power`/`toughness`, `color_identity`, `keywords`, `legalities` (dict, e.g. `.commander` — `legal`/`banned`/`not_legal`), `game_changer` (bool: on the official Commander Game Changers list, which is the bracket 2/3 boundary — 53 cards), `prices.usd`, `edhrec_rank` (lower = more played), `card_faces` (for double-faced/split cards, which have ` // ` in `name` and their text under faces, not top level).
 
 Single lookup:
 
@@ -27,9 +27,36 @@ Single lookup:
 python3 card.py "exact or partial name"
 ```
 
-Exact matches print alone; otherwise substring matches (max 20). For batch analysis (whole decklists, curve stats, searches by oracle text/color/price), stream the JSONL in a Python script — loading all lines with `json.loads` takes ~2s. When matching decklist names, also index `name.split(' // ')[0]` since deck sites use front-face names.
+Exact matches print alone; otherwise substring matches (max 20). Output carries the Commander legality and flags Game Changers. Art-series prints, tokens and emblems are skipped — they reuse real card names with no rules text; apply the same filter (`layout` not in `art_series`/`token`/`double_faced_token`/`emblem`/`minigame`) when scanning the file yourself, or a token will shadow the real card. For batch analysis (whole decklists, curve stats, searches by oracle text/color/price), stream the JSONL in a Python script — loading all lines with `json.loads` takes ~2s. When matching decklist names, also index `name.split(' // ')[0]` since deck sites use front-face names.
 
 If a name misses, try a substring of it — decklist sources sometimes garble names, and a card genuinely absent from the file probably doesn't exist under that name (tell the user rather than guessing).
+
+## EDHREC (cached locally in `edhrec/`)
+
+Popularity/synergy data for commanders, cards and themes is mirrored from `json.edhrec.com` into `edhrec/` (gzipped JSON, gitignored, regenerable). Query it offline — never fetch edhrec.com for something the cache holds:
+
+```bash
+python3 edhrec.py commander krenko        # themes, top + high-synergy cards, deck count
+python3 edhrec.py rec satoru -n 30        # recommended cards the deck is NOT running
+python3 edhrec.py rec satoru --by synergy --max-price 15   # synergy order, budget filter
+python3 edhrec.py cuts norin              # deck's cards, least-played first (cut candidates)
+python3 edhrec.py avg rinseri             # diff vs EDHREC's average decklist
+python3 edhrec.py card "goblin bombardment"   # play rate, salt, top commanders
+python3 edhrec.py theme goblins           # theme staples
+python3 edhrec.py list                    # cache contents + age
+```
+
+`commander`/`rec`/`cuts`/`avg` take a deck name from `decks/`; `commander` and `card` also accept any card name. Two numbers appear in every row: **inclusion** (`num_decks/potential_decks` — share of decks that could run the card and do) and **synergy** (EDHREC's lift over the card's baseline play rate; high synergy = played *because of* this commander). Read raw pages with `read_page("commanders/<slug>")` from `sync_edhrec.py` for anything the CLI doesn't print — the JSON also carries mana curves, bracket/budget splits, combo counts, and `similar` commanders.
+
+Refresh (conditional requests, so re-syncs are cheap; skips pages fetched within `--max-age`, default 3 days):
+
+```bash
+python3 sync_edhrec.py                    # commander + average-deck page per deck commander
+python3 sync_edhrec.py --themes --cards   # + top themes, + a page per card in every deck (slow, ~10 min)
+python3 sync_edhrec.py "Ygra, Eater of All"   # a commander that isn't one of the user's decks
+```
+
+A cache miss prints the exact sync command to run. Pages older than 7 days print a staleness note when queried — EDHREC recomputes weekly, so a week-old page is still usable; say so rather than refusing. Theme pages live under `tags/<slug>`, not `themes/`.
 
 ## Comprehensive Rules
 
@@ -43,16 +70,36 @@ Read the matching rule *and its subrules* (the following `NNN.Nx` lines) before 
 
 ## Refreshing the data
 
-Scryfall updates bulk data daily; the download URL is timestamped and changes. To refresh:
+**Run `python3 sync_cards.py` before the first card lookup of a session.** It is
+a no-op costing nothing when the data is fresh, so just run it — do not inspect
+the file's mtime first to decide.
 
 ```bash
-curl -s -A "mtg-deck-helper/1.0" "https://api.scryfall.com/bulk-data" \
-  | python3 -c "import json,sys; print([d['jsonl_download_uri'] for d in json.load(sys.stdin)['data'] if d['type']=='oracle_cards'][0])"
-# then curl that URL (same -A header; Scryfall 403s requests without a User-Agent),
-# gunzip to oracle-cards.jsonl in the repo root
+python3 sync_cards.py                 # refresh if older than 7 days (the default)
+python3 sync_cards.py --max-age 0     # ask Scryfall whether a newer file exists
+python3 sync_cards.py --check         # report staleness only; exit 1 if due
 ```
 
-New rules releases appear at https://magic.wizards.com/en/rules (plain-text link, URL contains the effective date).
+Scryfall publishes no incremental/delta feed — the bulk files are rebuilt whole
+each day — so the script's cheap path is skipping the download, not patching the
+file. Under `--max-age` it does not touch the network at all; past that it reads
+the few-KB bulk-data metadata endpoint and only pulls the ~25 MB archive when
+Scryfall's `updated_at` is newer than the local copy.
+
+Because `oracle-cards.jsonl` is gitignored, git cannot show what a refresh
+changed. The two fields that matter for deckbuilding — Commander legality and
+the `game_changer` flag — are snapshotted in the committed `cards-status.json`,
+and each sync diffs against it and prints bans, unbans, and Game Changer
+changes. **Report those lines to the user** rather than swallowing them; a new
+ban can invalidate a deck. Commit `cards-status.json` when it changes.
+
+If Scryfall is unreachable the script keeps the cached file and says so — use it
+and tell the user it may be stale, same as with a deck sync.
+
+The Comprehensive Rules are not scripted: new releases appear at
+https://magic.wizards.com/en/rules (plain-text link, URL contains the effective
+date). Check the "effective as of" line in `MagicCompRules.txt` when currency
+matters.
 
 ## Context
 

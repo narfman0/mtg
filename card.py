@@ -10,6 +10,7 @@ import os
 import sys
 
 DB = os.path.join(os.path.dirname(os.path.abspath(__file__)), "oracle-cards.jsonl")
+NONCARD = {"art_series", "token", "double_faced_token", "emblem", "minigame"}
 
 
 def fmt(c):
@@ -23,7 +24,9 @@ def fmt(c):
             out.append(f["oracle_text"])
     usd = (c.get("prices") or {}).get("usd")
     legal = c.get("legalities", {}).get("commander", "?")
-    out.append(f"-- ${usd} | commander: {legal} | edhrec rank: {c.get('edhrec_rank')}")
+    # Game Changers are the bracket 2/3 boundary, so flag them next to legality.
+    gc = " | GAME CHANGER" if c.get("game_changer") else ""
+    out.append(f"-- ${usd} | commander: {legal}{gc} | edhrec rank: {c.get('edhrec_rank')}")
     return "\n".join(out)
 
 
@@ -35,6 +38,10 @@ def main():
     with open(DB) as fh:
         for line in fh:
             c = json.loads(line)
+            # Art-series prints, tokens and emblems reuse real card names with
+            # no rules text, so they'd shadow the card actually being looked up.
+            if c.get("layout") in NONCARD:
+                continue
             name = c["name"].lower()
             if name == query or query in name.split(" // "):
                 exact.append(c)
