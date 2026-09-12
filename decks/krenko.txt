@@ -1,5 +1,4 @@
 1 Abrade
-1 Armillary Sphere
 1 Battle Cry Goblin
 1 Battle Squadron
 1 Beetleback Chief
@@ -26,6 +25,7 @@
 1 Goblin Javelineer
 1 Goblin Matron
 1 Goblin Rabblemaster
+1 Goblin Recruiter
 1 Goblin Ringleader
 1 Goblin Traprunner
 1 Goblin War Drums
@@ -43,11 +43,11 @@
 1 Kyren Negotiations
 1 Legion Warboss
 1 Memorial to War
-1 Mirror Shield
 1 Mogg Fanatic
 1 Mogg Raider
 1 Mogg War Marshal
 25 Mountain
+1 Purphoros, God of the Forge
 1 Raid Bombardment
 1 Reckless Bushwhacker
 1 Renegade Map
@@ -76,9 +76,11 @@
 
 1 Krenko, Mob Boss
 
+# Proxies (tagged on Moxfield; also listed above)
+1 Goblin Recruiter
+1 Purphoros, God of the Forge
+
 # Considering
 1 Conspicuous Snoop
-1 Goblin Recruiter
 1 Kiki-Jiki, Mirror Breaker
-1 Purphoros, God of the Forge
 1 Thornbite Staff
