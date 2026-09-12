@@ -6,6 +6,7 @@
 1 Brainstorm
 1 Cascade Bluffs
 1 Castle Vantress
+1 Chain of Vapor
 1 Command Tower
 1 Consecrated Sphinx
 1 Consider
@@ -13,6 +14,7 @@
 1 Curiosity
 1 Cyclonic Rift
 1 Deflecting Swat
+1 Drift of Phantasms
 1 Electrostatic Field
 1 Expressive Iteration
 1 Fabled Passage
@@ -45,22 +47,20 @@
 1 Mystic Sanctuary
 1 Mystical Tutor
 1 Negate
+1 Niv-Mizzet, Visionary
 1 Ophidian Eye
 1 Opt
 1 Otawara, Soaring City
-1 Past in Flames
-1 Personal Tutor
 1 Plaza of Heroes
 1 Ponder
 1 Pongify
 1 Preordain
+1 Pyroblast
 1 Rapid Hybridization
-1 Reality Shift
 1 Reflecting Pool
 1 Rhystic Study
 1 Riverglide Pathway // Lavaglide Pathway
 1 Scalding Tarn
-1 Serum Visions
 1 Shivan Reef
 1 Snap
 1 Sol Ring
@@ -92,14 +92,11 @@
 1 Faerie Mastermind
 1 Fierce Guardianship
 1 Fiery Inscription
-1 Flame of Anor
 1 Mana Drain
 1 Mizzix's Mastery
 1 Mystic Remora
 1 Mystical Tutor
 1 Otawara, Soaring City
-1 Personal Tutor
-1 Plaza of Heroes
 1 Pongify
 1 Reflecting Pool
 1 Rhystic Study
@@ -111,8 +108,6 @@
 1 Underworld Breach
 
 # Considering
-1 Chain of Vapor
-1 Drift of Phantasms
 1 Exotic Orchard
 1 Ferrous Lake
 1 Flusterstorm
@@ -123,12 +118,10 @@
 1 Mana Confluence
 1 Mirrormade
 1 Narset's Reversal
-1 Niv-Mizzet, Visionary
 1 Noble's Purse
 1 Pact of Negation
 1 Pentad Prism
 1 Phyrexian Metamorph
-1 Pyroblast
 1 Red Elemental Blast
 1 Reforge the Soul
 1 Resonating Lute
