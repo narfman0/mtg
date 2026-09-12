@@ -103,7 +103,6 @@
 1 Pongify
 1 Reflecting Pool
 1 Rhystic Study
-1 Riverglide Pathway // Lavaglide Pathway
 1 Scalding Tarn
 1 Steam Vents
 1 Swan Song

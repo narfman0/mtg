@@ -76,5 +76,7 @@
 1 Blasting Station
 1 Goblin Sharpshooter
 1 Imperial Recruiter
+1 Kurkesh, Onakke Ancient
 1 Maskwood Nexus
 1 Purphoros, God of the Forge
+1 Unwinding Clock
