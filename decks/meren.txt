@@ -96,4 +96,5 @@
 1 Chrome Mox
 1 Gaea's Cradle
 1 Mox Diamond
+1 Phyrexian Delver
 1 The One Ring
