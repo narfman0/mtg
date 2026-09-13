@@ -60,8 +60,8 @@
 1 Overgrown Tomb
 1 Phyrexian Altar
 1 Phyrexian Arena
+1 Phyrexian Delver
 1 Phyrexian Tower
-1 Prismatic Vista
 1 Protean Hulk
 1 Reanimate
 1 Sakura-Tribe Elder
@@ -96,5 +96,5 @@
 1 Chrome Mox
 1 Gaea's Cradle
 1 Mox Diamond
-1 Phyrexian Delver
+1 Prismatic Vista
 1 The One Ring
