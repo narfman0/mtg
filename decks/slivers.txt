@@ -99,7 +99,3 @@
 1 Worldly Tutor
 
 1 The First Sliver
-
-# Proxies (tagged on Moxfield; also listed above)
-1 Demonic Tutor
-1 Vampiric Tutor
