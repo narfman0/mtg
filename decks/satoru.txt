@@ -25,6 +25,7 @@
 1 Gingerbrute
 1 Go for the Throat
 1 Grave Titan
+1 Grazilaxx, Illithid Scholar
 1 Gudul Lurker
 1 Higure, the Still Wind
 1 Imperial Seal
@@ -33,7 +34,6 @@
 10 Island
 1 Jin-Gitaxias, Core Augur
 1 Kaito Shizuki
-1 Kozilek, the Great Distortion
 1 Lightning Greaves
 1 Lotus Petal
 1 Mausoleum Wanderer
@@ -42,6 +42,7 @@
 1 Mist-Syndicate Naga
 1 Moon-Circuit Hacker
 1 Morphic Pool
+1 Mystic Remora
 1 Nashi, Moon Sage's Scion
 1 Negate
 1 Ornithopter
@@ -75,7 +76,6 @@
 1 Underground River
 1 Valgavoth, Terror Eater
 1 Vampiric Tutor
-1 Victimize
 1 Waterfront District
 1 Watery Grave
 1 Wingcrafter
@@ -109,12 +109,10 @@
 1 Flusterstorm
 1 Force of Negation
 1 Force of Will
-1 Grazilaxx, Illithid Scholar
 1 Kozilek, Butcher of Truth
 1 Mana Confluence
 1 Mana Drain
 1 Misdirection
-1 Mystic Remora
 1 Palinchron
 1 Polluted Delta
 1 Sea Gate Restoration // Sea Gate, Reborn
