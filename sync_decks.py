@@ -5,9 +5,11 @@ Usage: sync_decks.py [deck ...]     (no args = sync all)
 
 Writes decks/<name>.txt as: mainboard, blank line, commander(s), then a
 "# Proxies" section (mainboard cards carrying Moxfield's "proxy" tag --
-a subset of the list above, not extra cards) and a "# Considering"
-section (the maybeboard: candidates, not part of the deck). Deck changes
-are committed and pushed automatically.
+a subset of the list above, not extra cards), a "# Purchased" section
+(cards tagged "purchased" -- bought but not necessarily arrived, so these
+are usually still maybeboard entries, marked [considering]), and a
+"# Considering" section (the maybeboard: candidates, not part of the
+deck). Deck changes are committed and pushed automatically.
 """
 import json
 import os
@@ -54,10 +56,22 @@ def sync(name, public_id):
     if proxies:
         out += ["", "# Proxies (tagged on Moxfield; also listed above)"]
         out += [f"{in_deck[n]} {n}" for n in proxies]
-    other = sorted({x for t in tags.values() for x in t if x.lower() != "proxy"})
+    maybe = boards.get("maybeboard", {"count": 0})
+    # "purchased" is the in-the-mail marker: bought, not necessarily arrived, so
+    # unlike proxies these usually sit in the maybeboard rather than the deck.
+    in_maybe = {v["card"]["name"]: v["quantity"]
+                for v in maybe.get("cards", {}).values()}
+    purchased = sorted(n for n, t in tags.items()
+                       if any(x.lower() == "purchased" for x in t)
+                       and (n in in_deck or n in in_maybe))
+    if purchased:
+        out += ["", "# Purchased (tagged on Moxfield; [considering] = not in the deck yet)"]
+        out += [f"{in_deck.get(n) or in_maybe[n]} {n}"
+                + ("" if n in in_deck else "  [considering]") for n in purchased]
+    tracked = {"proxy", "purchased"}
+    other = sorted({x for t in tags.values() for x in t if x.lower() not in tracked})
     if other:
         print(f"  note: {name} has untracked tags: {', '.join(other)}")
-    maybe = boards.get("maybeboard", {"count": 0})
     if maybe["count"]:
         out += ["", "# Considering"] + board_lines(maybe)
 
@@ -66,7 +80,8 @@ def sync(name, public_id):
         fh.write("\n".join(out) + "\n")
     print(f"{name}: {deck['name']!r} -> {path} "
           f"({boards['mainboard']['count']} main + {boards['commanders']['count']} cmdr"
-          f" + {len(proxies)} proxied + {maybe['count']} considering)")
+          f" + {len(proxies)} proxied + {len(purchased)} purchased"
+          f" + {maybe['count']} considering)")
 
 
 def commit_and_push():
