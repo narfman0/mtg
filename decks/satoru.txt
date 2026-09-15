@@ -12,10 +12,14 @@
 1 Counterspell
 1 Creeping Tar Pit
 1 Cut Down
+1 Cyclonic Rift
 1 Dark Ritual
+1 Darkslick Shores
 1 Darkwater Catacombs
 1 Demonic Tutor
 1 Dimir Signet
+1 Drown in the Loch
+1 Drowned Catacomb
 1 Exotic Orchard
 1 Faerie Seer
 1 Fallen Shinobi
@@ -52,9 +56,7 @@
 1 Reanimate
 1 Reconnaissance Mission
 1 Rhystic Study
-1 River of Tears
 1 Sakashima's Student
-1 Sheoldred, Whispering One
 1 Shizo, Death's Storehouse
 1 Silent-Blade Oni
 1 Silver-Fur Master
@@ -76,9 +78,7 @@
 1 Underground River
 1 Valgavoth, Terror Eater
 1 Vampiric Tutor
-1 Waterfront District
 1 Watery Grave
-1 Wingcrafter
 1 Yuriko, the Tiger's Shadow
 
 1 Satoru Umezawa
@@ -87,18 +87,13 @@
 1 Demonic Tutor
 1 Imperial Seal
 1 Morphic Pool
-1 Sheoldred, Whispering One
 1 Shizo, Death's Storehouse
 1 Valgavoth, Terror Eater
 1 Vampiric Tutor
 
 # Considering
 1 Archon of Cruelty
-1 Cyclonic Rift
-1 Darkslick Shores
 1 Deadly Rollick
-1 Drown in the Loch
-1 Drowned Catacomb
 1 Fierce Guardianship
 1 Flusterstorm
 1 Force of Will
