@@ -26,10 +26,15 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(BASE, "edhrec")
 BASICS = {"Plains", "Island", "Swamp", "Mountain", "Forest", "Wastes"}
 BASICS |= {f"Snow-Covered {b}" for b in BASICS}
-# Per-type lists hold the full recommendation set; the rest are cuts of it.
 TYPE_LISTS = ("creatures", "instants", "sorceries", "utilityartifacts",
               "enchantments", "battles", "planeswalkers", "utilitylands",
               "manaartifacts", "lands")
+# EDHREC promotes these cards into their own boxes and then *omits* them from
+# the per-type lists -- the two sets are disjoint. Scanning only TYPE_LISTS
+# silently drops ~35 of a page's highest-profile cards, so recommendations must
+# read both.
+FEATURE_LISTS = ("highsynergycards", "topcards", "gamechangers", "newcards")
+REC_LISTS = FEATURE_LISTS + TYPE_LISTS
 
 sys.path.insert(0, BASE)
 from sync_edhrec import deck_sections, read_page, slugify, load_index  # noqa: E402
@@ -125,8 +130,8 @@ def cmd_rec(args):
     for name in deck["commanders"]:
         data = page(f"commanders/{slugify(name)}", args.target)
         lists = cardlists(data)
-        seen, out, basics = set(), [], 0
-        for tag in TYPE_LISTS:
+        seen, out, basics, gc = set(), [], 0, set()
+        for tag in REC_LISTS:
             for cv in lists.get(tag, {}).get("cardviews", []):
                 if cv["name"] in have or cv["name"] in seen:
                     continue
@@ -135,6 +140,8 @@ def cmd_rec(args):
                     continue
                 if args.max_price and usd.get(cv["name"], 0) > args.max_price:
                     continue
+                if tag == "gamechangers":
+                    gc.add(cv["name"])  # bracket-relevant: 3 is the bracket 3 cap
                 seen.add(cv["name"])
                 out.append(cv)
         out.sort(key=lambda cv: -(cv.get("synergy") or 0) if args.by == "synergy" else -pct(cv))
@@ -143,6 +150,8 @@ def cmd_rec(args):
               f"[considering] = already on your maybeboard)\n")
         for cv in out[:args.n]:
             tail = f"  ${usd[cv['name']]:g}" if cv["name"] in usd else ""
+            if cv["name"] in gc:
+                tail += "  [game changer]"
             if cv["name"] in maybe:
                 tail += "  [considering]"
             print(row(cv, tail))
@@ -218,7 +227,7 @@ def cmd_theme(args):
     data = page(f"tags/{slugify(args.target)}", f"--themes")
     lists = cardlists(data)
     print(f"== {data.get('header') or args.target}\n")
-    for tag in ("topcommanders", "highsynergycards", "topcards") + TYPE_LISTS:
+    for tag in ("topcommanders",) + FEATURE_LISTS + TYPE_LISTS:
         cl = lists.get(tag)
         if not cl:
             continue
