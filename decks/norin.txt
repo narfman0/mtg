@@ -71,6 +71,10 @@
 
 1 Norin the Wary
 
+# Purchased (tagged on Moxfield; [considering] = not in the deck yet)
+1 Reforge the Soul
+1 Simian Spirit Guide
+
 # Considering
 1 Ashnod's Altar
 1 Blasting Station

@@ -92,6 +92,71 @@
 
 1 Meren of Clan Nel Toth
 
+# Purchased (tagged on Moxfield; [considering] = not in the deck yet)
+1 Abrupt Decay
+1 Accursed Marauder
+1 Animate Dead
+1 Apprentice Necromancer
+1 Archon of Cruelty
+1 Assassin's Trophy
+1 Blood Artist
+1 Bone Shards
+1 Braids, Arisen Nightmare
+1 Buried Alive
+1 Carrion Feeder
+1 Chthonian Nightmare
+1 Command Tower
+1 Culling the Weak
+1 Dark Ritual
+1 Dauthi Voidwalker
+1 Deathcap Glade
+1 Deathrite Shaman
+1 Dina's Guidance
+1 Disciple of the Vault
+1 Dryad Arbor
+1 Elves of Deep Shadow
+1 Elvish Mystic
+1 Endurance
+1 Eternal Witness
+1 Fiend Artisan
+1 Footsteps of the Goryo
+1 Force of Vigor
+1 Fyndhorn Elves
+1 Grim Haruspex
+1 Growing Rites of Itlimoc // Itlimoc, Cradle of the Sun
+1 Haywire Mite
+1 High Market
+1 Lesser Masticore
+1 Lightning Greaves
+1 Lively Dirge
+1 Llanowar Elves
+1 Llanowar Wastes
+1 Marionette Apprentice
+1 Melira, Sylvok Outcast
+1 Morbid Opportunist
+1 Nurturing Peatland
+1 Overgrown Tomb
+1 Phyrexian Arena
+1 Phyrexian Delver
+1 Protean Hulk
+1 Reanimate
+1 Sakura-Tribe Elder
+1 Shifting Woodland
+1 Skullclamp
+1 Snuff Out
+1 Sol Ring
+1 Spore Frog
+1 Sylvan Safekeeper
+1 Toxic Deluge
+1 Undergrowth Stadium
+1 Unmarked Grave
+1 Victimize
+1 Viscera Seer
+1 Walking Ballista
+1 Wastewood Verge
+1 Woodland Cemetery
+1 Zulaport Cutthroat
+
 # Considering
 1 Chrome Mox
 1 Gaea's Cradle

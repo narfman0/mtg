@@ -91,12 +91,21 @@
 1 Valgavoth, Terror Eater
 1 Vampiric Tutor
 
+# Purchased (tagged on Moxfield; [considering] = not in the deck yet)
+1 Flusterstorm  [considering]
+1 Valgavoth, Terror Eater
+
 # Considering
 1 Archon of Cruelty
 1 Deadly Rollick
 1 Fierce Guardianship
 1 Flusterstorm
+1 Force of Negation
 1 Force of Will
+1 Hullbreaker Horror
 1 Mana Drain
+1 Peregrine Drake
 1 Polluted Delta
+1 Swan Song
+1 Tormented Soul
 1 Urborg, Tomb of Yawgmoth
