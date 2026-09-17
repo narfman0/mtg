@@ -40,7 +40,6 @@
 1 Kaito Shizuki
 1 Lightning Greaves
 1 Lotus Petal
-1 Mausoleum Wanderer
 1 Mind Stone
 1 Mist-Cloaked Herald
 1 Mist-Syndicate Naga
@@ -72,6 +71,7 @@
 1 Tetsuko Umezawa, Fugitive
 1 Thassa, God of the Sea
 1 Thousand-Faced Shadow
+1 Tormented Soul
 1 Toxic Deluge
 1 Toxrill, the Corrosive
 1 Triton Shorestalker
@@ -105,5 +105,4 @@
 1 Peregrine Drake
 1 Polluted Delta
 1 Swan Song
-1 Tormented Soul
 1 Urborg, Tomb of Yawgmoth
