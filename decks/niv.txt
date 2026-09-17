@@ -109,6 +109,7 @@
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
 1 Fabled Passage
 1 Fiery Inscription
+1 Flusterstorm  [considering]
 1 Mystic Remora
 1 Pongify
 1 Spirebluff Canal  [considering]
