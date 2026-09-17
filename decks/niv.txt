@@ -24,7 +24,6 @@
 1 Fierce Guardianship
 1 Fiery Inscription
 1 Fiery Islet
-1 Firebrand Archer
 1 Flame of Anor
 1 Frantic Search
 1 Gamble
@@ -39,8 +38,6 @@
 1 Mana Drain
 1 Mental Misstep
 1 Merchant Scroll
-1 Mind Stone
-1 Mizzix's Mastery
 7 Mountain
 1 Muddle the Mixture
 1 Mystic Remora
@@ -58,10 +55,12 @@
 1 Pyroblast
 1 Rapid Hybridization
 1 Reflecting Pool
+1 Reforge the Soul
 1 Rhystic Study
 1 Riverglide Pathway // Lavaglide Pathway
 1 Scalding Tarn
 1 Shivan Reef
+1 Simian Spirit Guide
 1 Snap
 1 Sol Ring
 1 Steam Vents
@@ -70,6 +69,7 @@
 1 Sulfur Falls
 1 Swan Song
 1 Talisman of Creativity
+1 Tandem Lookout
 1 The Locust God
 1 The One Ring
 1 Thermo-Alchemist
@@ -93,7 +93,6 @@
 1 Fierce Guardianship
 1 Fiery Inscription
 1 Mana Drain
-1 Mizzix's Mastery
 1 Mystic Remora
 1 Mystical Tutor
 1 Otawara, Soaring City
@@ -110,16 +109,11 @@
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
 1 Fabled Passage
 1 Fiery Inscription
-1 Flusterstorm  [considering]
-1 Mizzix's Mastery
 1 Mystic Remora
 1 Pongify
-1 Reforge the Soul  [considering]
-1 Simian Spirit Guide  [considering]
 1 Spirebluff Canal  [considering]
 1 Steam Vents
 1 Swan Song
-1 Tandem Lookout  [considering]
 1 Training Center
 1 Underworld Breach
 
@@ -139,16 +133,13 @@
 1 Pentad Prism
 1 Phyrexian Metamorph
 1 Red Elemental Blast
-1 Reforge the Soul
 1 Resonating Lute
 1 Rite of Flame
 1 Riverpyre Verge
 1 Scorched Geyser
 1 Seething Song
-1 Simian Spirit Guide
 1 Spirebluff Canal
 1 Swiftfoot Boots
-1 Tandem Lookout
 1 Teferi's Ageless Insight
 1 Thousand-Year Storm
 1 Valakut Awakening // Valakut Stoneforge
