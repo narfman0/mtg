@@ -168,8 +168,10 @@ def cmd_cuts(args):
         data = page(f"commanders/{slugify(name)}", args.target)
         lists = cardlists(data)
         stats = {cv["name"]: cv for cl in lists.values() for cv in cl["cardviews"]}
-        rated = [stats[c] for c in mainboard if c in stats]
-        unrated = [c for c in mainboard if c not in stats]
+        # EDHREC indexes DFCs by front face; deck files carry the full "a // b" name.
+        look = lambda c: stats.get(c) or stats.get(re.sub(r" // .*", "", c))
+        rated = [cv for c in mainboard if (cv := look(c))]
+        unrated = [c for c in mainboard if not look(c)]
         rated.sort(key=lambda cv: pct(cv))
         print(f"== decks/{args.target}.txt cards by {name} play rate, least-played first\n")
         for cv in rated[:args.n]:
