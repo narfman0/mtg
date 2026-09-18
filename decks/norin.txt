@@ -72,9 +72,12 @@
 1 Norin the Wary
 
 # Considering
+1 Agate Instigator
 1 Ashnod's Altar
 1 Blasting Station
+1 Confusion in the Ranks
 1 Genesis Chamber
+1 Gimli of the Glittering Caves
 1 Goblin Sharpshooter
 1 Imperial Recruiter
 1 Kurkesh, Onakke Ancient
@@ -82,4 +85,5 @@
 1 Pandemonium
 1 Panharmonicon
 1 Purphoros, God of the Forge
+1 Terror of the Peaks
 1 Unwinding Clock
