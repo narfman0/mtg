@@ -88,33 +88,23 @@
 1 Consecrated Sphinx
 1 Cyclonic Rift
 1 Deflecting Swat
-1 Fabled Passage
 1 Faerie Mastermind
 1 Fierce Guardianship
-1 Fiery Inscription
 1 Mana Drain
-1 Mystic Remora
 1 Mystical Tutor
 1 Otawara, Soaring City
-1 Pongify
 1 Reflecting Pool
 1 Rhystic Study
 1 Scalding Tarn
 1 Steam Vents
 1 Swan Song
 1 The One Ring
-1 Training Center
 
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
-1 Fabled Passage
-1 Fiery Inscription
 1 Flusterstorm  [considering]
-1 Mystic Remora
-1 Pongify
 1 Spirebluff Canal  [considering]
 1 Steam Vents
 1 Swan Song
-1 Training Center
 
 # Considering
 1 Exotic Orchard
