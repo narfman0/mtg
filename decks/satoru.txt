@@ -37,7 +37,7 @@
 1 Ink-Eyes, Servant of Oni
 10 Island
 1 Jin-Gitaxias, Core Augur
-1 Kaito Shizuki
+2 Kaito Shizuki
 1 Lightning Greaves
 1 Lotus Petal
 1 Mind Stone

@@ -71,16 +71,15 @@
 
 1 Norin the Wary
 
-# Purchased (tagged on Moxfield; [considering] = not in the deck yet)
-1 Reforge the Soul
-1 Simian Spirit Guide
-
 # Considering
 1 Ashnod's Altar
 1 Blasting Station
+1 Genesis Chamber
 1 Goblin Sharpshooter
 1 Imperial Recruiter
 1 Kurkesh, Onakke Ancient
 1 Maskwood Nexus
+1 Pandemonium
+1 Panharmonicon
 1 Purphoros, God of the Forge
 1 Unwinding Clock

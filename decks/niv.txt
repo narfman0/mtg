@@ -104,7 +104,6 @@
 1 Swan Song
 1 The One Ring
 1 Training Center
-1 Underworld Breach
 
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
 1 Fabled Passage
@@ -116,7 +115,6 @@
 1 Steam Vents
 1 Swan Song
 1 Training Center
-1 Underworld Breach
 
 # Considering
 1 Exotic Orchard
