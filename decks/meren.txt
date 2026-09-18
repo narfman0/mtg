@@ -101,7 +101,6 @@
 1 Chthonian Nightmare
 1 Culling the Weak
 1 Dark Ritual
-1 Dauthi Voidwalker
 1 Deathrite Shaman
 1 Disciple of the Vault
 1 Dryad Arbor
