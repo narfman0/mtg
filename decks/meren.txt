@@ -92,6 +92,12 @@
 
 1 Meren of Clan Nel Toth
 
+# Proxies (tagged on Moxfield; also listed above)
+1 Demonic Tutor
+1 Phyrexian Altar
+1 Survival of the Fittest
+1 Urborg, Tomb of Yawgmoth
+
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
 1 Apprentice Necromancer
 1 Blood Artist
