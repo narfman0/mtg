@@ -93,10 +93,19 @@
 1 Meren of Clan Nel Toth
 
 # Proxies (tagged on Moxfield; also listed above)
+1 Ancient Tomb
+1 Boseiju, Who Endures
 1 Demonic Tutor
+1 Imperial Seal
+1 Lotus Petal
+1 Marsh Flats
+1 Misty Rainforest
 1 Phyrexian Altar
+1 Phyrexian Tower
 1 Survival of the Fittest
 1 Urborg, Tomb of Yawgmoth
+1 Vampiric Tutor
+1 Verdant Catacombs
 
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
 1 Apprentice Necromancer
