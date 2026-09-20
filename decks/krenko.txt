@@ -80,6 +80,9 @@
 1 Goblin Recruiter
 1 Purphoros, God of the Forge
 
+# Purchased (tagged on Moxfield; [considering] = not in the deck yet)
+1 Goblin Recruiter
+
 # Considering
 1 Conspicuous Snoop
 1 Kiki-Jiki, Mirror Breaker
