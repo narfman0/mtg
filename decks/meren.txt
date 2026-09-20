@@ -143,6 +143,21 @@
 1 Woodland Cemetery
 1 Zulaport Cutthroat
 
+# Tagged printme (tagged on Moxfield; [considering] = not in the deck yet)
+1 Agadeem's Awakening // Agadeem, the Undercrypt
+1 Ashnod's Altar
+1 Birds of Paradise
+1 Diabolic Intent
+1 Entomb
+1 Green Sun's Zenith
+1 Mikaeus, the Unhallowed
+1 Natural Order
+1 Necromancy
+1 Takenuma, Abandoned Mire
+1 Warren Soultrader
+1 Yavimaya, Cradle of Growth
+1 Yawgmoth, Thran Physician
+
 # Considering
 1 Chrome Mox
 1 Contamination
