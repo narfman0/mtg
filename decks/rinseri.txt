@@ -109,3 +109,11 @@
 1 Overgrown Farmland
 1 Qasali Slingers
 1 Regal Caracal
+
+# Purchased (tagged on Moxfield; [considering] = not in the deck yet)
+1 Ajani's Welcome
+1 Leonin Warleader
+1 Marisi, Breaker of the Coil
+1 Maskwood Nexus
+1 Overgrown Farmland
+1 Regal Caracal
