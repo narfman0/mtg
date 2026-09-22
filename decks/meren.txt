@@ -94,69 +94,49 @@
 
 # Proxies (tagged on Moxfield; also listed above)
 1 Ancient Tomb
+1 Ashnod's Altar
+1 Birds of Paradise
 1 Boseiju, Who Endures
 1 Demonic Tutor
+1 Diabolic Intent
+1 Entomb
+1 Green Sun's Zenith
 1 Imperial Seal
 1 Lotus Petal
 1 Marsh Flats
+1 Mikaeus, the Unhallowed
 1 Misty Rainforest
+1 Natural Order
+1 Necromancy
 1 Phyrexian Altar
 1 Phyrexian Tower
 1 Survival of the Fittest
+1 Takenuma, Abandoned Mire
 1 Urborg, Tomb of Yawgmoth
 1 Vampiric Tutor
 1 Verdant Catacombs
+1 Warren Soultrader
+1 Yavimaya, Cradle of Growth
+1 Yawgmoth, Thran Physician
 
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
-1 Apprentice Necromancer
-1 Blood Artist
-1 Bone Shards
-1 Braids, Arisen Nightmare
-1 Buried Alive
-1 Chthonian Nightmare
-1 Culling the Weak
-1 Dark Ritual
 1 Deathrite Shaman
-1 Disciple of the Vault
-1 Dryad Arbor
-1 Elvish Mystic
-1 Endurance
 1 Fiend Artisan
 1 Footsteps of the Goryo
-1 Force of Vigor
-1 Grim Haruspex
-1 Lesser Masticore
-1 Lively Dirge
-1 Llanowar Elves
 1 Llanowar Wastes
-1 Marionette Apprentice
-1 Melira, Sylvok Outcast
 1 Phyrexian Arena
-1 Phyrexian Delver
-1 Protean Hulk
 1 Shifting Woodland
-1 Sol Ring
 1 Spore Frog
 1 Sylvan Safekeeper
 1 Undergrowth Stadium
-1 Wastewood Verge
 1 Woodland Cemetery
 1 Zulaport Cutthroat
 
 # Tagged printme (tagged on Moxfield; [considering] = not in the deck yet)
 1 Agadeem's Awakening // Agadeem, the Undercrypt
-1 Ashnod's Altar
-1 Birds of Paradise
-1 Diabolic Intent
-1 Entomb
-1 Green Sun's Zenith
-1 Mikaeus, the Unhallowed
-1 Natural Order
-1 Necromancy
-1 Takenuma, Abandoned Mire
-1 Warren Soultrader
-1 Yavimaya, Cradle of Growth
-1 Yawgmoth, Thran Physician
+1 Marsh Flats
+1 Misty Rainforest
+1 Verdant Catacombs
 
 # Considering
 1 Chrome Mox

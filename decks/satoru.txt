@@ -37,7 +37,7 @@
 1 Ink-Eyes, Servant of Oni
 10 Island
 1 Jin-Gitaxias, Core Augur
-2 Kaito Shizuki
+1 Kaito Shizuki
 1 Lightning Greaves
 1 Lotus Petal
 1 Mind Stone
@@ -88,11 +88,7 @@
 1 Imperial Seal
 1 Morphic Pool
 1 Shizo, Death's Storehouse
-1 Valgavoth, Terror Eater
 1 Vampiric Tutor
-
-# Purchased (tagged on Moxfield; [considering] = not in the deck yet)
-1 Valgavoth, Terror Eater
 
 # Considering
 1 Archon of Cruelty

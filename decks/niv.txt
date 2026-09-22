@@ -96,15 +96,11 @@
 1 Reflecting Pool
 1 Rhystic Study
 1 Scalding Tarn
-1 Steam Vents
-1 Swan Song
 1 The One Ring
 
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
 1 Flusterstorm  [considering]
 1 Spirebluff Canal  [considering]
-1 Steam Vents
-1 Swan Song
 
 # Considering
 1 Exotic Orchard
