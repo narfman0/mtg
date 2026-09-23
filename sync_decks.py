@@ -126,7 +126,26 @@ def commit_and_push():
     subprocess.run(git + ["add", "decks"], check=True)
     subprocess.run(git + ["commit", "-m",
                           f"Sync {', '.join(changed)} from Moxfield"], check=True)
-    subprocess.run(git + ["push"], check=True)
+    push(git)
+
+
+def push(git):
+    """Push HEAD to main, whatever branch or worktree we happen to be on.
+
+    Deck history lives on main only, but this repo gets checked out on three
+    machines and in throwaway git worktrees, where the current branch has no
+    upstream and a bare `git push` dies with exit 128. HEAD:main sidesteps
+    branch naming and upstream config entirely; a rejection just means another
+    machine pushed first, so rebase onto it and retry once.
+    """
+    if subprocess.run(git + ["push", "origin", "HEAD:main"]).returncode == 0:
+        return
+    print("push rejected; rebasing onto origin/main and retrying", file=sys.stderr)
+    if subprocess.run(git + ["pull", "--rebase", "origin", "main"]).returncode != 0:
+        subprocess.run(git + ["rebase", "--abort"])
+        sys.exit("rebase onto origin/main failed; deck sync is committed but unpushed")
+    if subprocess.run(git + ["push", "origin", "HEAD:main"]).returncode != 0:
+        sys.exit("push failed; deck sync is committed but unpushed")
 
 
 def main():
