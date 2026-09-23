@@ -124,8 +124,6 @@
 1 Fiend Artisan
 1 Footsteps of the Goryo
 1 Llanowar Wastes
-1 Phyrexian Arena
-1 Shifting Woodland
 1 Spore Frog
 1 Sylvan Safekeeper
 1 Undergrowth Stadium
