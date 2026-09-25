@@ -48,7 +48,6 @@
 1 Ophidian Eye
 1 Opt
 1 Otawara, Soaring City
-1 Plaza of Heroes
 1 Ponder
 1 Pongify
 1 Preordain
@@ -63,6 +62,7 @@
 1 Simian Spirit Guide
 1 Snap
 1 Sol Ring
+1 Spirebluff Canal
 1 Steam Vents
 1 Storm-Kiln Artist
 1 Stormcarved Coast
@@ -100,7 +100,6 @@
 
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
 1 Flusterstorm  [considering]
-1 Spirebluff Canal  [considering]
 
 # Considering
 1 Exotic Orchard
@@ -123,7 +122,6 @@
 1 Riverpyre Verge
 1 Scorched Geyser
 1 Seething Song
-1 Spirebluff Canal
 1 Swiftfoot Boots
 1 Teferi's Ageless Insight
 1 Thousand-Year Storm

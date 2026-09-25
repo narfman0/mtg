@@ -101,7 +101,6 @@
 1 Demonic Tutor
 1 Diabolic Intent
 1 Entomb
-1 Fiend Artisan
 1 Footsteps of the Goryo
 1 Green Sun's Zenith
 1 Imperial Seal
@@ -116,9 +115,7 @@
 1 Phyrexian Tower
 1 Spore Frog
 1 Survival of the Fittest
-1 Sylvan Safekeeper
 1 Takenuma, Abandoned Mire
-1 Undergrowth Stadium
 1 Urborg, Tomb of Yawgmoth
 1 Vampiric Tutor
 1 Verdant Catacombs
@@ -130,12 +127,9 @@
 
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
 1 Deathrite Shaman
-1 Fiend Artisan
 1 Footsteps of the Goryo
 1 Llanowar Wastes
 1 Spore Frog
-1 Sylvan Safekeeper
-1 Undergrowth Stadium
 1 Woodland Cemetery
 1 Zulaport Cutthroat
 
