@@ -1,4 +1,5 @@
 1 Abrade
+1 Aether Revolt
 1 Agate Instigator
 1 Arcane Signet
 1 Beetleback Chief
@@ -6,25 +7,22 @@
 1 Bitter Reunion
 1 Blasphemous Act
 1 Buried Ruin
-1 Captain Lannery Storm
 1 Chain Reaction
 1 Chaos Warp
 1 Dragon Fodder
 1 Dwarven Mine
-1 Everflowing Chalice
 1 Faithless Looting
 1 Fiery Confluence
 1 Flameshadow Conjuring
+1 Fury
 1 General Kreat, the Boltbringer
 1 Genesis Chamber
 1 Goblin Assault
 1 Goblin Bombardment
-1 Goblin Grenade
 1 Goblin Instigator
-1 Goblin Matron
 1 Goblin Rabblemaster
-1 Goblin Warchief
-1 Hanweir Garrison
+1 Grinning Ignus
+1 Hawkeye, Young Avenger
 1 Hordeling Outburst
 1 Idol of Oblivion
 1 Impact Tremors
@@ -43,6 +41,7 @@
 1 Panharmonicon
 1 Purphoros, God of the Forge
 1 Pyroblast
+1 Raphael, Tough Turtle
 1 Reckless Impulse
 1 Reforge the Soul
 1 Rose Room Treasurer
@@ -51,8 +50,8 @@
 1 Shocking Sharpshooter
 1 Siege-Gang Commander
 1 Simian Spirit Guide
-1 Skirk Prospector
 1 Skullclamp
+1 Slash, Reptile Rampager
 1 Sokenzan, Crucible of Defiance
 1 Sol Ring
 1 Solemn Simulacrum
@@ -60,6 +59,7 @@
 1 Tempt with Vengeance
 1 Terror of the Peaks
 1 Thrill of Possibility
+1 Tokka & Rahzar, Unsupervised
 1 Tome of Legends
 1 Torbran, Thane of Red Fell
 1 Urabrask's Forge
@@ -71,9 +71,3 @@
 1 Young Pyromancer
 
 1 Norin the Wary
-
-# Tagged printme (tagged on Moxfield; [considering] = not in the deck yet)
-1 Ojer Axonil, Deepest Might // Temple of Power
-1 Purphoros, God of the Forge
-1 Pyroblast
-1 Terror of the Peaks
