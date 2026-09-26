@@ -1,4 +1,5 @@
 1 Abrade
+1 Agate Instigator
 1 Arcane Signet
 1 Beetleback Chief
 1 Big Score
@@ -8,82 +9,65 @@
 1 Captain Lannery Storm
 1 Chain Reaction
 1 Chaos Warp
-1 Commander's Sphere
-1 Dark-Dweller Oracle
-1 Den of the Bugbear
 1 Dragon Fodder
-1 Empty the Warrens
+1 Dwarven Mine
 1 Everflowing Chalice
 1 Faithless Looting
 1 Fiery Confluence
 1 Flameshadow Conjuring
-1 Fling
+1 General Kreat, the Boltbringer
+1 Genesis Chamber
 1 Goblin Assault
 1 Goblin Bombardment
 1 Goblin Grenade
 1 Goblin Instigator
 1 Goblin Matron
 1 Goblin Rabblemaster
-1 Goblin Rally
 1 Goblin Warchief
 1 Hanweir Garrison
-1 High Market
 1 Hordeling Outburst
 1 Idol of Oblivion
 1 Impact Tremors
 1 Impulsive Pilferer
+1 Irreverent Gremlin
 1 Kher Keep
 1 Krenko's Command
-1 Legion Warboss
-1 Light Up the Stage
-1 Mask of Memory
+1 Mechanized Warfare
 1 Mind Stone
 1 Mogg War Marshal
 1 Molten Gatekeeper
-30 Mountain
+29 Mountain
 1 Ogre Battledriver
+1 Ojer Axonil, Deepest Might // Temple of Power
 1 Outpost Siege
-1 Pashalik Mons
+1 Panharmonicon
+1 Purphoros, God of the Forge
 1 Pyroblast
 1 Reckless Impulse
 1 Reforge the Soul
 1 Rose Room Treasurer
 1 Seize the Spoils
 1 Shattering Spree
+1 Shocking Sharpshooter
 1 Siege-Gang Commander
 1 Simian Spirit Guide
 1 Skirk Prospector
 1 Skullclamp
+1 Sokenzan, Crucible of Defiance
 1 Sol Ring
 1 Solemn Simulacrum
-1 Squee, Dubious Monarch
-1 Stalking Vengeance
+1 Springleaf Drum
 1 Tempt with Vengeance
+1 Terror of the Peaks
 1 Thrill of Possibility
 1 Tome of Legends
 1 Torbran, Thane of Red Fell
 1 Urabrask's Forge
 1 Vandalblast
+1 War Room
 1 Warstorm Surge
+1 Weftstalker Ardent
 1 Witty Roastmaster
-1 Wrenn's Resolve
 1 Young Pyromancer
 
 1 Norin the Wary
-
-# Considering
-1 Agate Instigator
-1 Ashnod's Altar
-1 Blasting Station
-1 Confusion in the Ranks
-1 Genesis Chamber
-1 Gimli of the Glittering Caves
-1 Goblin Sharpshooter
-1 Imperial Recruiter
-1 Kurkesh, Onakke Ancient
-1 Maskwood Nexus
-1 Pandemonium
-1 Panharmonicon
-1 Purphoros, God of the Forge
-1 Terror of the Peaks
-1 Unwinding Clock
