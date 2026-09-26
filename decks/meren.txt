@@ -1,5 +1,6 @@
 1 Abrupt Decay
 1 Accursed Marauder
+1 Agadeem's Awakening // Agadeem, the Undercrypt
 1 Ancient Tomb
 1 Animate Dead
 1 Apprentice Necromancer
@@ -133,6 +134,7 @@
 1 Zulaport Cutthroat
 
 # Tagged printme (tagged on Moxfield; [considering] = not in the deck yet)
+1 Agadeem's Awakening // Agadeem, the Undercrypt
 1 Marsh Flats
 1 Misty Rainforest
 1 Verdant Catacombs
