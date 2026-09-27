@@ -98,9 +98,6 @@
 1 Scalding Tarn
 1 The One Ring
 
-# Purchased (tagged on Moxfield; [considering] = not in the deck yet)
-1 Flusterstorm  [considering]
-
 # Considering
 1 Exotic Orchard
 1 Ferrous Lake
