@@ -33,6 +33,7 @@ DECKS = {
     "meren": "91xtZt8BVUi4GhSnVdf00Q",
     "kenrith": "vmELna4qVkKrPTpQNNt4mA",
     "shadowfax": "AOn-rcS300-LbNT7wNbZ-A",
+    "gishath": "9l2yUs7sx0yG50JXvNtIUA",
 }
 
 BASE = os.path.dirname(os.path.abspath(__file__))
