@@ -42,6 +42,7 @@
 1 Kediss, Emberclaw Familiar
 1 Kykar, Wind's Fury
 1 Leap
+1 Legion Leadership // Legion Stronghold
 1 Loran's Escape
 1 Medomai the Ageless
 1 Monastery Mentor
@@ -91,9 +92,7 @@
 1 Training Center
 
 # Purchased (tagged on Moxfield; [considering] = not in the deck yet)
-1 Legion Leadership // Legion Stronghold  [considering]
 1 Shelter  [considering]
 
 # Considering
-1 Legion Leadership // Legion Stronghold
 1 Shelter
