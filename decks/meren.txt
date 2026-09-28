@@ -97,14 +97,11 @@
 1 Ashnod's Altar
 1 Birds of Paradise
 1 Boseiju, Who Endures
-1 Deathrite Shaman
 1 Demonic Tutor
 1 Diabolic Intent
 1 Entomb
-1 Footsteps of the Goryo
 1 Green Sun's Zenith
 1 Imperial Seal
-1 Llanowar Wastes
 1 Lotus Petal
 1 Marsh Flats
 1 Mikaeus, the Unhallowed
@@ -113,31 +110,17 @@
 1 Necromancy
 1 Phyrexian Altar
 1 Phyrexian Tower
-1 Spore Frog
 1 Survival of the Fittest
 1 Takenuma, Abandoned Mire
 1 Urborg, Tomb of Yawgmoth
 1 Vampiric Tutor
 1 Verdant Catacombs
 1 Warren Soultrader
-1 Woodland Cemetery
 1 Yavimaya, Cradle of Growth
 1 Yawgmoth, Thran Physician
-1 Zulaport Cutthroat
-
-# Purchased (tagged on Moxfield; [considering] = not in the deck yet)
-1 Deathrite Shaman
-1 Footsteps of the Goryo
-1 Llanowar Wastes
-1 Spore Frog
-1 Woodland Cemetery
-1 Zulaport Cutthroat
 
 # Tagged printme (tagged on Moxfield; [considering] = not in the deck yet)
 1 Agadeem's Awakening // Agadeem, the Undercrypt
-1 Marsh Flats
-1 Misty Rainforest
-1 Verdant Catacombs
 
 # Considering
 1 Chrome Mox
