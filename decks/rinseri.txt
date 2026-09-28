@@ -103,3 +103,7 @@
 # Proxies (tagged on Moxfield; also listed above)
 1 Heroic Intervention
 1 Qasali Slingers
+
+# Tagged printme (tagged on Moxfield; [considering] = not in the deck yet)
+1 Heroic Intervention
+1 Qasali Slingers
