@@ -85,7 +85,6 @@
 1 Syphon Sliver
 1 Teferi's Protection
 1 Temple Garden
-1 Thorncaster Sliver
 1 Thrumming Hivepool
 1 Training Grounds
 1 Triumph of the Hordes
