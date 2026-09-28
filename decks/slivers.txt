@@ -1,7 +1,4 @@
-1 Amoeboid Changeling
-1 Ancient Ziggurat
 1 Anguished Unmaking
-1 Arcane Adaptation
 1 Arcane Signet
 1 Arid Mesa
 1 Assassin's Trophy
@@ -15,10 +12,11 @@
 1 Cavern of Souls
 1 Chromatic Lantern
 1 City of Brass
-1 Coat of Arms
+1 Cloudshredder Sliver
 1 Command Tower
+1 Constricting Sliver
 1 Counterspell
-1 Crypt Sliver
+1 Crippling Fear
 1 Cryptolith Rite
 1 Crystalline Sliver
 1 Cyclonic Rift
@@ -28,31 +26,30 @@
 1 Fellwar Stone
 1 Fierce Guardianship
 1 Flooded Strand
-1 Forbidden Orchard
-1 Fungus Sliver
 1 Galerider Sliver
 1 Gemhide Sliver
 1 Godless Shrine
 1 Hallowed Fountain
 1 Harmonic Sliver
 1 Heart Sliver
+1 Herald's Horn
 1 Hibernation Sliver
 1 Homing Sliver
+1 Horned Sliver
 1 Island
 1 Kindred Discovery
-1 Kindred Summons
 1 Lavabelly Sliver
 1 Leeching Sliver
 1 Mana Confluence
 1 Mana Drain
 1 Manaweft Sliver
 1 Marsh Flats
+1 Megantic Sliver
 1 Misty Rainforest
-1 Morophon, the Boundless
 1 Muscle Sliver
 1 Necrotic Sliver
-1 Opaline Sliver
 1 Overgrown Tomb
+1 Path of Ancestry
 1 Path to Exile
 1 Patriarch's Bidding
 1 Phyrexian Arena
@@ -67,11 +64,15 @@
 1 Sacred Foundry
 1 Savai Triome
 1 Scalding Tarn
+1 Secluded Courtyard
 1 Sentinel Sliver
+1 Shared Animosity
+1 Shifting Sliver
 1 Sinew Sliver
 1 Sliver Hive
 1 Sliver Hivelord
 1 Sliver Legion
+1 Sliver Queen
 1 Sol Ring
 1 Steam Vents
 1 Stomping Ground
@@ -81,13 +82,13 @@
 1 Swords to Plowshares
 1 Sylvan Library
 1 Synapse Sliver
-1 Talon Sliver
+1 Syphon Sliver
 1 Teferi's Protection
 1 Temple Garden
-1 The First Sliver
 1 Thorncaster Sliver
-1 Toxic Deluge
+1 Thrumming Hivepool
 1 Training Grounds
+1 Triumph of the Hordes
 1 Two-Headed Sliver
 1 Unclaimed Territory
 1 Vampiric Tutor
@@ -96,7 +97,6 @@
 1 Verdant Catacombs
 1 Watery Grave
 1 Windswept Heath
-1 Winged Sliver
 1 Zagoth Triome
 
 1 Sliver Overlord

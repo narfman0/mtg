@@ -125,6 +125,20 @@
 1 Yawgmoth, Thran Physician
 1 Zulaport Cutthroat
 
+# Purchased (tagged on Moxfield; [considering] = not in the deck yet)
+1 Deathrite Shaman
+1 Footsteps of the Goryo
+1 Llanowar Wastes
+1 Spore Frog
+1 Woodland Cemetery
+1 Zulaport Cutthroat
+
+# Tagged printme (tagged on Moxfield; [considering] = not in the deck yet)
+1 Agadeem's Awakening // Agadeem, the Undercrypt
+1 Marsh Flats
+1 Misty Rainforest
+1 Verdant Catacombs
+
 # Considering
 1 Chrome Mox
 1 Contamination
