@@ -10,3 +10,7 @@ __pycache__/
 
 # This machine's card-file version (the shared pin is cards-status.json)
 .cards-local.json
+
+# Mana Pool singles prices — regenerable, see sync_prices.py
+manapool-prices.json
+manapool-prices.json.part
