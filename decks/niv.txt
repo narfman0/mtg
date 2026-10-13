@@ -85,6 +85,7 @@
 1 Niv-Mizzet, Parun
 
 # Proxies (tagged on Moxfield; also listed above)
+1 Brainstorm
 1 Consecrated Sphinx
 1 Cyclonic Rift
 1 Deflecting Swat
