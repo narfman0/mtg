@@ -93,6 +93,7 @@
 1 Meren of Clan Nel Toth
 
 # Proxies (tagged on Moxfield; also listed above)
+1 Agadeem's Awakening // Agadeem, the Undercrypt
 1 Ancient Tomb
 1 Ashnod's Altar
 1 Birds of Paradise
@@ -118,9 +119,6 @@
 1 Warren Soultrader
 1 Yavimaya, Cradle of Growth
 1 Yawgmoth, Thran Physician
-
-# Tagged printme (tagged on Moxfield; [considering] = not in the deck yet)
-1 Agadeem's Awakening // Agadeem, the Undercrypt
 
 # Considering
 1 Chrome Mox
