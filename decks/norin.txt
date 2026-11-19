@@ -75,5 +75,4 @@
 # Proxies (tagged on Moxfield; also listed above)
 1 Ojer Axonil, Deepest Might // Temple of Power
 1 Purphoros, God of the Forge
-1 Pyroblast
 1 Terror of the Peaks

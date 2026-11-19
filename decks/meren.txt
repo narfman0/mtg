@@ -96,7 +96,6 @@
 1 Agadeem's Awakening // Agadeem, the Undercrypt
 1 Ancient Tomb
 1 Ashnod's Altar
-1 Birds of Paradise
 1 Boseiju, Who Endures
 1 Demonic Tutor
 1 Diabolic Intent

@@ -85,7 +85,6 @@
 1 Niv-Mizzet, Parun
 
 # Proxies (tagged on Moxfield; also listed above)
-1 Brainstorm
 1 Consecrated Sphinx
 1 Cyclonic Rift
 1 Deflecting Swat
@@ -94,7 +93,6 @@
 1 Mana Drain
 1 Mystical Tutor
 1 Otawara, Soaring City
-1 Reflecting Pool
 1 Rhystic Study
 1 Scalding Tarn
 1 The One Ring
