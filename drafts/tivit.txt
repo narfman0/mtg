@@ -5,15 +5,10 @@
 1 Split Decision
 1 Plea for Power
 1 Council's Judgment
-1 Capital Punishment
 1 Magister of Worth
 1 Custodi Squire
-1 Messenger Jays
-1 Lieutenants of the Guard
 1 Master of Ceremonies
 1 Kambal, Profiteering Mayor
-1 Vault 11: Voter's Dilemma
-1 Coercive Portal
 1 Tyrant's Choice
 1 Bite of the Black Rose
 1 Trap the Trespassers
@@ -30,7 +25,6 @@
 1 Soulherder
 1 Brago, King Eternal
 1 Teleportation Circle
-1 Conjurer's Closet
 1 Panharmonicon
 1 Displacer Kitten
 1 Swords to Plowshares
@@ -43,25 +37,20 @@
 1 Supreme Verdict
 1 Toxic Deluge
 1 Propaganda
-1 Ghostly Prison
 1 Solemn Simulacrum
 1 Baleful Strix
 1 Windborn Muse
 1 Merchant of Truth
-1 Tempt with Reflections
 1 Trial of a Time Lord
-1 Sadistic Shell Game
 1 Mulldrifter
 1 Sol Ring
 1 Arcane Signet
 1 Azorius Signet
 1 Dimir Signet
 1 Orzhov Signet
-1 Fellwar Stone
 1 Mind Stone
 1 Thought Vessel
 1 Model of Unity
-1 Commander's Sphere
 1 Godless Shrine
 1 Hallowed Fountain
 1 Watery Grave
@@ -84,12 +73,23 @@
 1 Path of Ancestry
 1 Obscura Storefront
 1 Contaminated Landscape
-1 Reliquary Tower
-1 Rogue's Passage
 1 Evolving Wilds
 1 Terramorphic Expanse
 3 Plains
 3 Island
 3 Swamp
+1 Revel in Riches
+1 Mechanized Production
+1 Marionette Master
+1 The Sackville-Bagginses
+1 Restoration Angel
+1 Skyclave Apparition
+1 Ravenous Chupacabra
+1 Archaeomancer
+1 Wall of Omens
+1 Whirler Rogue
+1 Reflector Mage
+1 Flickerwisp
+1 Sphinx's Revelation
 
 1 Tivit, Seller of Secrets
