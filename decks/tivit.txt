@@ -1,0 +1,95 @@
+1 Academy Manufactor
+1 Adarkar Wastes
+1 An Offer You Can't Refuse
+1 Anguished Unmaking
+1 Arcane Sanctum
+1 Arcane Signet
+1 Archaeomancer
+1 Azorius Signet
+1 Baleful Strix
+1 Ballot Broker
+1 Bite of the Black Rose
+1 Brago's Representative
+1 Brago, King Eternal
+1 Caves of Koilos
+1 Choked Estuary
+1 Cloudshift
+1 Command Tower
+1 Contaminated Landscape
+1 Council's Judgment
+1 Counterspell
+1 Custodi Squire
+1 Deserted Beach
+1 Dimir Signet
+1 Disorder in the Court
+1 Displacer Kitten
+1 Dovin's Veto
+1 Drowned Catacomb
+1 Ephemerate
+1 Evolving Wilds
+1 Exotic Orchard
+1 Fact or Fiction
+1 Fetid Heath
+1 Flickerwisp
+1 Ghostly Flicker
+1 Glacial Fortress
+1 Godless Shrine
+1 Grudge Keeper
+1 Hallowed Fountain
+1 Illusion of Choice
+3 Island
+1 Isolated Chapel
+1 Kambal, Profiteering Mayor
+1 Lotho, Corrupt Shirriff
+1 Marionette Master
+1 Master of Ceremonies
+1 Mechanized Production
+1 Merchant of Truth
+1 Mind Stone
+1 Mirkwood Bats
+1 Model of Unity
+1 Mulldrifter
+1 Obscura Storefront
+1 Orzhov Signet
+1 Panharmonicon
+1 Path of Ancestry
+1 Path to Exile
+4 Plains
+1 Plea for Power
+1 Prairie Stream
+1 Propaganda
+1 Raffine's Tower
+1 Ravenous Chupacabra
+1 Reflector Mage
+1 Restoration Angel
+1 Revel in Riches
+1 Rhystic Study
+1 Shipwreck Marsh
+1 Skyclave Apparition
+1 Smothering Tithe
+1 Sol Ring
+1 Solemn Simulacrum
+1 Soulherder
+1 Spell Queller
+1 Sphinx's Revelation
+1 Sunken Hollow
+1 Supreme Verdict
+2 Swamp
+1 Swords to Plowshares
+1 Tamiyo's Journal
+1 Teleportation Circle
+1 Terramorphic Expanse
+1 The Sackville-Bagginses
+1 Thought Vessel
+1 Toxic Deluge
+1 Trial of a Time Lord
+1 Tyrant's Choice
+1 Underground River
+1 Venser, Shaper Savant
+1 Void Rend
+1 Wall of Omens
+1 Watery Grave
+1 Whirler Rogue
+1 Windborn Muse
+
+1 Tivit, Seller of Secrets
