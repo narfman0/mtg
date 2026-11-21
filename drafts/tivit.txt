@@ -2,16 +2,16 @@
 1 Ballot Broker
 1 Grudge Keeper
 1 Illusion of Choice
-1 Split Decision
+1 Venser, Shaper Savant
 1 Plea for Power
 1 Council's Judgment
-1 Magister of Worth
+1 Spell Queller
 1 Custodi Squire
 1 Master of Ceremonies
 1 Kambal, Profiteering Mayor
 1 Tyrant's Choice
 1 Bite of the Black Rose
-1 Trap the Trespassers
+1 Lotho, Corrupt Shirriff
 1 Academy Manufactor
 1 Mirkwood Bats
 1 Smothering Tithe
@@ -75,9 +75,9 @@
 1 Contaminated Landscape
 1 Evolving Wilds
 1 Terramorphic Expanse
-3 Plains
+4 Plains
 3 Island
-3 Swamp
+2 Swamp
 1 Revel in Riches
 1 Mechanized Production
 1 Marionette Master
