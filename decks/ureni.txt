@@ -92,3 +92,26 @@
 1 Yavimaya Coast
 
 1 Ureni of the Unwritten
+
+# Proxies (tagged on Moxfield; also listed above)
+1 Ancient Copper Dragon
+1 Ancient Silver Dragon
+1 Balefire Dragon
+1 Bloomvine Regent // Claim Territory
+1 Cavern of Souls
+1 Deflecting Swat
+1 Fellwar Stone
+1 Goldspan Dragon
+1 Heroic Intervention
+1 Ketria Triome
+1 Mana Drain
+1 Misty Rainforest
+1 Old Gnawbone
+1 Rejuvenating Springs
+1 Roaming Throne
+1 Scalding Tarn
+1 Terror of the Peaks
+1 Three Visits
+1 Twinflame Tyrant
+1 Urza's Incubator
+1 Wooded Foothills
