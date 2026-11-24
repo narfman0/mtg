@@ -4,7 +4,7 @@ List: `drafts/kinnan.txt` (v1, 100 cards, 33 lands, 13 mana creatures + 7 rocks)
 
 ## Constraints
 - Bracket 3. Game Changers: Seedborn Muse, Rhystic Study, Cyclonic Rift (max 3).
-- Left out on purpose (all trip Bracket 4 or cEDH): Basalt Monolith / Grim Monolith (Kinnan + Monolith = infinite {C}), Freed from the Real, Pemmin's Aura (Kinnan + either = infinite), Bloom Tender + Freed, Hullbreaker Horror and Tidespout Tyrant (infinite with Sol Ring), Gaea's Cradle, fast mana (Moxen, Mana Vault), Thrasios + Tymna style partners, Fierce Guardianship, Force of Will, Consecrated Sphinx, Crop Rotation, Worldly Tutor.
+- Left out on purpose (all trip Bracket 4 or cEDH): Basalt Monolith / Grim Monolith (Kinnan + Monolith = infinite {C}), Freed from the Real, Pemmin's Aura (Kinnan + either = infinite), Bloom Tender + Freed, Hullbreaker Horror and Tidespout Tyrant (infinite with Sol Ring), Gaea's Cradle, fast mana (Moxen, Mana Vault), Fierce Guardianship, Force of Will, Consecrated Sphinx, Crop Rotation, Worldly Tutor.
 
 ## Plan
 - Kinnan: whenever you tap a nonland permanent for mana, add one mana of any type that permanent produced. Each dork or rock nets +1. The ability ({5}{G}{U}) digs 5 for a non-Human creature, so the creature suite is all non-Human.
